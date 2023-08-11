@@ -87,7 +87,7 @@ Author URI: http://themeforest.net/user/XpeedStudio/portfolio
 	}
 	
 	.navbar-default .navbar-collapse, .navbar-default .navbar-form {
-		background:#ffc038;
+		/* background:#ffc038; */
 		border:0;
 	}
 	.homepage-style .slider-area {

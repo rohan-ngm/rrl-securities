@@ -414,7 +414,7 @@ btn-group-md > .btn {
     background-color: #ffffff;
 }
 .btn-primary:focus {
-    background-color: #f56363;
+    /* background-color: #f56363; */
     border-color: transparent;
 }
 .btn-primary:hover {
@@ -600,7 +600,7 @@ h1 span {
 }
 
 .unique-apps .home-btn button{
-    background:#46801A;
+    /* background:#46801A; */
     padding:15px 20px;
     color:#fff;
     font-size:16px;
