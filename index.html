@@ -669,7 +669,7 @@
                     scrollTop: $($(this).attr("href")).offset().top
                 }, 500);
             });
-        });
+        }, {passive:false});
     </script>
     <script>
         document.getElementById("sendEmail").addEventListener("click", function () {
