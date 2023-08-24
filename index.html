@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js">
 
 <meta name="description"
     content="RRl Security Pvt. Ltd. is an organisation which provides you with class one security solutions for your business, property, childrens, etc.">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets/css/plugins.css" />
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css" />
-    <link rel="shortcut icon" type="image/png" href="assets/images/favico.png" />
+    <link rel="shortcut icon" href="assets/images/favico.png" type="image/png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -45,6 +45,11 @@
                         <li><a href="#contact-us" class="scrollLink">Contact Us</a></li>
                         <li><a href="#we-are-hiring" class="scrollLink">We are hiring</a></li>
                         <li><a href="#our-team" class="scrollLink">Our Team</a></li>
+                        <li style="margin-top: 2%;"><select class="form-select" id="languages" name="languages"
+                            onchange="myFunction()">
+                            <option value="en">ENGLISH</option>
+                            <option value="hi">HINDI - हिन्दी</option>
+                        </select></li>
                     </ul>
                 </div>
             </div>
@@ -147,14 +152,14 @@
                     </div>
                 </div>
                 <div class="portfolio-wrap">
-                    <div class="portfolio" id="male_security">
+                    <div class="portfolio">
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <img src="assets/images/3.webp" alt="" />
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="portfolio-item" style="text-align: justify;">
-                                <h4>MALE SECURITY GUARD</h4>
-                                <p>
+                                <h4 id="male_security">MALE SECURITY GUARD</h4>
+                                <p id="male_security_description">
                                     Our security guards are the embodiment of vigilance and reliability, standing as
                                     unwavering sentinels of safety. Trained to perfection, they bring a sense of
                                     assurance to any environment they secure. Equipped with comprehensive expertise and
@@ -169,11 +174,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio" id="female_security">
+                    <div class="portfolio">
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="portfolio-item" style="text-align: justify;">
-                                <h4>FEMALE SECURITY GUARD</h4>
-                                <p>
+                                <h4 id="female_security">FEMALE SECURITY GUARD</h4>
+                                <p id="female_security_description">
                                     Introducing our exceptional team of female security guards – a testament to
                                     empowerment, strength, and professionalism. At RRL Security Pvt. Ltd. we
                                     recognize the
@@ -192,14 +197,14 @@
                             <img src="assets/images/fsg.webp" alt="" />
                         </div>
                     </div>
-                    <div class="portfolio" id="cash_management">
+                    <div class="portfolio">
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <img src="assets/images/cm.webp" alt="" />
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="portfolio-item" style="text-align: justify;">
-                                <h4>CASH MANAGEMENT</h4>
-                                <p>
+                                <h4 id="cash_management">CASH MANAGEMENT</h4>
+                                <p id="cash_management_description">
                                     In the realm of modern business, effective cash management is paramount to ensuring
                                     financial stability and smooth operations. At RRL Security Pvt. Ltd. our
                                     dedicated
@@ -217,11 +222,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio" id="event_security">
+                    <div class="portfolio">
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="portfolio-item" style="text-align: justify;">
-                                <h4>EVENT SECURITY</h4>
-                                <p>
+                                <h4 id="event_security">EVENT SECURITY</h4>
+                                <p id="event_security_description">
                                     Event security is a critical aspect that demands meticulous attention and effective
                                     management to ensure the safety and smooth execution of any gathering. Our dedicated
                                     team of highly trained security guards takes on the responsibility of event security
@@ -240,14 +245,14 @@
                             <img src="assets/images/es.webp" alt="" />
                         </div>
                     </div>
-                    <div class="portfolio" id="office_security">
+                    <div class="portfolio">
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <img src="assets/images/3.webp" alt="" />
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="portfolio-item" style="text-align: justify;">
-                                <h4>OFFICE SECURITY</h4>
-                                <p>
+                                <h4 id="office_security">OFFICE SECURITY</h4>
+                                <p id="office_security_description">
                                     Office security is of paramount importance, and our dedicated team of security
                                     guards is here to ensure a safe and secure environment for your workplace. With a
                                     vigilant presence and a deep commitment to safeguarding your office premises, our
@@ -265,11 +270,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio" id="building_security">
+                    <div class="portfolio">
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="portfolio-item" style="text-align: justify;">
-                                <h4>BUILDING SECURITY GUARD</h4>
-                                <p>
+                                <h4 id="building_security">BUILDING SECURITY GUARD</h4>
+                                <p id="building_security_description">
                                     Security guards play a vital role in ensuring the safety and protection of
                                     buildings. With a watchful presence and a keen eye for detail, security guards
                                     effectively safeguard entrances, monitor surveillance systems, and control access
@@ -289,14 +294,14 @@
                             <img src="assets/images/bs.webp" alt="" />
                         </div>
                     </div>
-                    <div class="portfolio" id="industrial_security">
+                    <div class="portfolio">
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <img src="assets/images/3.webp" alt="" />
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="portfolio-item" style="text-align: justify;">
-                                <h4>INDUSTRIAL SECURITY</h4>
-                                <p>
+                                <h4 id="industrial_security">INDUSTRIAL SECURITY</h4>
+                                <p id="industrial_security_description">
                                     Industrial security is of paramount importance in today's fast-paced and
                                     ever-evolving business landscape. The intricate nature of industrial facilities
                                     demands a robust security framework, and this is where our dedicated team of
@@ -316,11 +321,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio" id="retail_security">
+                    <div class="portfolio">
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="portfolio-item" style="text-align: justify;">
-                                <h4>RETAIL SECURITY</h4>
-                                <p>
+                                <h4 id="retail_security">RETAIL SECURITY</h4>
+                                <p id="retail_security_description">
                                     In the dynamic landscape of retail, security is a paramount concern that directly
                                     influences both customer experience and business operations. Our dedicated team of
                                     highly trained security guards specializes in providing comprehensive retail
@@ -342,14 +347,14 @@
                             <img src="assets/images/bs.webp" alt="" />
                         </div>
                     </div>
-                    <div class="portfolio" id="industrial_security">
+                    <div class="portfolio">
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <img src="assets/images/3.webp" alt="" />
                         </div>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="portfolio-item" style="text-align: justify;">
-                                <h4>HOSPITAL SECURITY</h4>
-                                <p>
+                                <h4 id="industrial_security">HOSPITAL SECURITY</h4>
+                                <p id="industrial_security_description">
                                     Hospital security is a critical aspect of ensuring a safe and secure environment
                                     for patients, visitors, and healthcare professionals. Security guards play a pivotal
                                     role in upholding the well-being of everyone within the hospital premises. These
@@ -367,11 +372,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio" id="property_security">
+                    <div class="portfolio">
                         <div class="col-md-6 col-sm-6 col-xs-12">
                             <div class="portfolio-item" style="text-align: justify;">
-                                <h4>PROPERTY SECURITY</h4>
-                                <p>
+                                <h4 id="property_security">PROPERTY SECURITY</h4>
+                                <p id="property_security_description">
                                     Property security is of paramount importance, and our dedicated team of
                                     security guards takes it upon themselves to ensure the safeguarding of your
                                     valuable assets. With their vigilant presence and unwavering commitment, our
@@ -394,14 +399,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="portfolio" id="school_security">
+                <div class="portfolio">
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <img src="assets/images/3.webp" alt="" />
                     </div>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <div class="portfolio-item" style="text-align: justify;">
-                            <h4>SCHOOL SECURITY</h4>
-                            <p>
+                            <h4 id="school_security">SCHOOL SECURITY</h4>
+                            <p id="school_security_description">
                                 The safety and security of students within a school environment are
                                 paramount, and this responsibility is diligently undertaken by our team of
                                 dedicated security guards. At [School Name], our security guards play a
@@ -697,6 +702,26 @@
             var mailtoLink = "mailto:info@rrlsecurities.co.in,hr@rrlsecurities.co.in" + "?subject=" + subject + "&body=" + body;
             window.location.href = mailtoLink;
         });
+    </script>
+    <script>
+        function myFunction() {
+            var language = document.getElementById("languages");
+            var ms = document.getElementById("male_security");
+            var msd = document.getElementById("male_security_description");
+            var fs = document.getElementById("female_security");
+            var fsd = document.getElementById("female_security_description");
+            if (language.value === "en") {
+                ms.innerHTML = "MALE SECURITY GUARD";
+                msd.innerHTML = "Our security guards are the embodiment of vigilance and reliability, standing as unwavering sentinels of safety. Trained to perfection, they bring a sense of assurance to any environment they secure. Equipped with comprehensive expertise and a commitment to safeguarding lives and property, our security guards are not just protectors, but also ambassadors of peace. With a keen eye for detail and a proactive approach, they ensure that every corner is shielded from potential threats. Our security guards are not just professionals; they are the guardians of tranquility, ensuring that you can carry on with confidence in a secure environment. Trust in their dedication and experience as they stand as the first line of defense against any challenge, demonstrating our unwavering commitment to your safety."
+                fs.innerHTML = "FEMALE SECURITY GUARD";
+                fsd.innerHTML = "Introducing our exceptional team of female security guards – a testament to empowerment, strength, and professionalism. At RRL Security Pvt. Ltd. we recognize the importance of diversity and inclusivity in the security industry. Our female security guards are highly trained, skilled, and committed to providing top-tier security services to our clients. With an acute sense of situational awareness and a unique ability to foster a secure environment, they bring a distinctive touch to every assignment. Their presence signifies not only a commitment to safety but also  a representation of equality in the field. Trust in our female security guards to bring a balance of empathy and authority, ensuring your peace of mind while upholding our unwavering standards of security excellence."
+            } else {
+                ms.innerHTML = "पुरुष सुरक्षा गार्ड";
+                msd.innerHTML = "हमारे सुरक्षा गार्ड सतर्कता और विश्वसनीयता के प्रतीक हैं, जो सुरक्षा के अटूट प्रहरी के रूप में खड़े हैं। पूर्णता के लिए प्रशिक्षित, वे जिस भी वातावरण को सुरक्षित करते हैं उसमें आश्वासन की भावना लाते हैं। व्यापक विशेषज्ञता और जीवन और संपत्ति की सुरक्षा के प्रति प्रतिबद्धता से लैस, हमारे सुरक्षा गार्ड न केवल रक्षक हैं, बल्कि शांति के राजदूत भी हैं। विस्तार पर गहरी नजर और सक्रिय दृष्टिकोण के साथ, वे यह सुनिश्चित करते हैं कि हर कोने को संभावित खतरों से बचाया जाए। हमारे सुरक्षा गार्ड सिर्फ पेशेवर नहीं हैं; वे शांति के संरक्षक हैं, यह सुनिश्चित करते हुए कि आप सुरक्षित वातावरण में आत्मविश्वास के साथ आगे बढ़ सकें। उनके समर्पण और अनुभव पर भरोसा रखें क्योंकि वे किसी भी चुनौती के खिलाफ रक्षा की पहली पंक्ति के रूप में खड़े हैं, जो आपकी सुरक्षा के प्रति हमारी अटूट प्रतिबद्धता को प्रदर्शित करता है।"
+                fs.innerHTML = "महिला सुरक्षा गार्ड";
+                fsd.innerHTML = "महिला सुरक्षा गार्डों की हमारी असाधारण टीम का परिचय - सशक्तिकरण, शक्ति और व्यावसायिकता का एक प्रमाण। आरआरएल सिक्योरिटी प्रा. लिमिटेड हम सुरक्षा उद्योग में विविधता और समावेशिता के महत्व को पहचानते हैं। हमारी महिला सुरक्षा गार्ड अत्यधिक प्रशिक्षित, कुशल और हमारे ग्राहकों को शीर्ष स्तरीय सुरक्षा सेवाएँ प्रदान करने के लिए प्रतिबद्ध हैं। स्थितिजन्य जागरूकता की तीव्र भावना और एक सुरक्षित वातावरण को बढ़ावा देने की अद्वितीय क्षमता के साथ, वे हर कार्य में एक विशिष्ट स्पर्श लाते हैं। उनकी उपस्थिति न केवल सुरक्षा के प्रति प्रतिबद्धता बल्कि क्षेत्र में समानता का प्रतिनिधित्व भी दर्शाती है। सुरक्षा उत्कृष्टता के हमारे अटूट मानकों को कायम रखते हुए, आपकी मानसिक शांति सुनिश्चित करते हुए, सहानुभूति और अधिकार का संतुलन लाने के लिए हमारी महिला सुरक्षा गार्डों पर भरोसा करें।"
+            }
+        }
     </script>
 </body>
 
