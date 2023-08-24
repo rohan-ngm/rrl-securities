@@ -57,6 +57,7 @@ function myFunction() {
     var our_team = document.getElementById("our_team");
 
     var language = document.getElementById("languages");
+    var services = document.getElementById("services");
 
     var ms = document.getElementById("male_security");
     var msd = document.getElementById("male_security_description");
@@ -97,10 +98,23 @@ function myFunction() {
     var tel_3 = document.getElementById("tel_3");
     var join_us_today = document.getElementById("join_us_today");
 
+    var sendEmail = document.getElementById("sendEmail");
+    var our_team_members = document.getElementById("our_team_members");
+    var d1_name = document.getElementById("d1_name");
+    var d1_des = document.getElementById("d1_des");
+    var d1_email = document.getElementById("d1_email");
+    var d2_name = document.getElementById("d2_name");
+    var d2_des = document.getElementById("d2_des");
+    var d2_email = document.getElementById("d2_email");
+    var hr_name = document.getElementById("hr_name");
+    var hr_des = document.getElementById("hr_des");
+    var hr_email = document.getElementById("hr_email");
+
     if (language.value === "en") {
         title = "RRL Security Pvt. Ltd.";
         introduction = "Introduction";
         services_link.innerHTML = "Services";
+        services.innerHTML = "Services";
         contact_us.innerHTML = "Contact Us";
         we_are_hiring.innerHTML = "We are hiring";
         our_team.innerHTML = "Our Team";
@@ -131,10 +145,22 @@ function myFunction() {
         tel_2.innerHTML = "9313431129";
         tel_3.innerHTML = "(0512)-222222222";
         join_us_today.innerHTML = "JOIN US TODAY !";
+        sendEmail.innerHTML = "Submit";
+        our_team_members.innerHTML = "Our Team Members";
+        d1_name.innerHTML = "Radhakrishanan Nigam";
+        d1_des.innerHTML = "Director";
+        d1_email.innerHTML = "director@rrlsecurity.com";
+        d2_name.innerHTML = "Rohan Nigam";
+        d2_des.innerHTML = "Director";
+        d2_email.innerHTML = "director@rrlsecurity.com";
+        hr_name.innerHTML = "Supriya Nigam";
+        hr_des.innerHTML = "HR (Human Resources)";
+        hr_email.innerHTML = "hr-head@rrlsecurity.com";
     } else {
         title = "आरआरएल सिक्योरिटी प्रा. लिमिटेड";
         introduction = "परिचय";
         services_link.innerHTML = "सेवाएं";
+        services.innerHTML = "सेवाएं";
         contact_us.innerHTML = "संपर्क करें";
         we_are_hiring.innerHTML = "हम भर्ती कर रहे हैं";
         our_team.innerHTML = "हमारी टीम";
@@ -165,5 +191,13 @@ function myFunction() {
         tel_2.innerHTML = "9313431129";
         tel_3.innerHTML = "(0512)-222222222";
         join_us_today.innerHTML = "आज ही शामिल हों !";
+        sendEmail.innerHTML = "जमा करना";
+        our_team_members.innerHTML = "हमारी टीम के सदस्य";
+        d1_name.innerHTML = "राधाकृष्णनन निगम";
+        d1_des.innerHTML = "निदेशक";
+        d2_name.innerHTML = "रोहन निगम";
+        d2_des.innerHTML = "निदेशक";
+        hr_name.innerHTML = "सुप्रिया निगम";
+        hr_des.innerHTML = "एचआर (मानव संसाधन)";
     }
 }
