@@ -1,13 +1,91 @@
 
 function toggleContent() {
-    var hiddenContent = document.getElementById("hidden-content");
+    var hiddenContent = document.getElementById("hidden_content");
+    var hcp_1 = document.getElementById("hcp_1");
+    var hcp_2 = document.getElementById("hcp_2");
+    var hcp_3 = document.getElementById("hcp_3");
+    var hcp_4 = document.getElementById("hcp_4");
     var button = document.querySelector(".view-more-button");
+    var language = document.getElementById("languages");
     if (hiddenContent.style.display === "none") {
         hiddenContent.style.display = "block";
-        button.textContent = "View Less";
+        if (language.value === "en") {
+            button.textContent = "View Less";
+        } else {
+            button.textContent = "कम देखें";
+        }
     } else {
         hiddenContent.style.display = "none";
-        button.textContent = "View More";
+        if (language.value === "en") {
+            button.textContent = "View More";
+        } else {
+            button.textContent = "और देखें";
+        }
+
+    }
+    if (hcp_1.style.display === "none") {
+        hcp_1.style.display = "block";
+        if (language.value === "en") {
+            button.textContent = "View Less";
+        } else {
+            button.textContent = "कम देखें";
+        }
+    } else {
+        hcp_1.style.display = "none";
+        if (language.value === "en") {
+            button.textContent = "View More";
+        } else {
+            button.textContent = "और देखें";
+        }
+
+    }
+    if (hcp_2.style.display === "none") {
+        hcp_2.style.display = "block";
+        if (language.value === "en") {
+            button.textContent = "View Less";
+        } else {
+            button.textContent = "कम देखें";
+        }
+    } else {
+        hcp_2.style.display = "none";
+        if (language.value === "en") {
+            button.textContent = "View More";
+        } else {
+            button.textContent = "और देखें";
+        }
+
+    }
+    if (hcp_3.style.display === "none") {
+        hcp_3.style.display = "block";
+        if (language.value === "en") {
+            button.textContent = "View Less";
+        } else {
+            button.textContent = "कम देखें";
+        }
+    } else {
+        hcp_3.style.display = "none";
+        if (language.value === "en") {
+            button.textContent = "View More";
+        } else {
+            button.textContent = "और देखें";
+        }
+
+    }
+    if (hcp_4.style.display === "none") {
+        hcp_4.style.display = "block";
+        if (language.value === "en") {
+            button.textContent = "View Less";
+        } else {
+            button.textContent = "कम देखें";
+        }
+    } else {
+        hcp_4.style.display = "none";
+        if (language.value === "en") {
+            button.textContent = "View More";
+        } else {
+            button.textContent = "और देखें";
+        }
+
     }
 }
 
@@ -47,56 +125,57 @@ document.getElementById("sendEmail").addEventListener("click", function () {
 
 
 function myFunction() {
-
     var title = document.getElementById("title");
-
     var intro = document.getElementById("intro");
     var services_link = document.getElementById("services_link");
     var contact_us = document.getElementById("contact_us");
     var we_are_hiring = document.getElementById("we_are_hiring");
     var our_team = document.getElementById("our_team");
-
     var language = document.getElementById("languages");
     var services = document.getElementById("services");
-
+    var rrlSecurity = document.getElementById("rrlSecurity");
+    var welcome1 = document.getElementById("welcome1");
+    var view_more = document.getElementById("view_more");
+    var hcp_1 = document.getElementById("hcp_1");
+    var hcp_2 = document.getElementById("hcp_2");
+    var hcp_3 = document.getElementById("hcp_3");
+    var hcp_4 = document.getElementById("hcp_4");
     var ms = document.getElementById("male_security");
     var msd = document.getElementById("male_security_description");
-
     var fs = document.getElementById("female_security");
     var fsd = document.getElementById("female_security_description");
-
     var cm = document.getElementById("cash_management");
     var cmd = document.getElementById("cash_management_description");
-
     var es = document.getElementById("event_security");
     var esd = document.getElementById("event_security_description");
-
     var os = document.getElementById("office_security");
     var osd = document.getElementById("office_security_description");
-
     var bs = document.getElementById("building_security");
     var bsd = document.getElementById("building_security_description");
-
     var is = document.getElementById("industrial_security");
     var isd = document.getElementById("industrial_security_description");
-
     var rs = document.getElementById("retail_security");
     var rsd = document.getElementById("retail_security_description");
-
     var hs = document.getElementById("hospital_security");
     var hsd = document.getElementById("hospital_security_description");
-
     var ps = document.getElementById("property_security");
     var psd = document.getElementById("property_security_description");
-
     var ss = document.getElementById("school_security");
     var ssd = document.getElementById("school_security_description");
-
     var cu = document.getElementById("contact-us");
     var tel_1 = document.getElementById("tel_1");
     var tel_2 = document.getElementById("tel_2");
     var tel_3 = document.getElementById("tel_3");
     var join_us_today = document.getElementById("join_us_today");
+
+    var fn = document.getElementById("fn");
+    var first_name = document.getElementById("first_name");
+    var ln = document.getElementById("ln");
+    var last_name = document.getElementById("last_name");
+    var e_mail = document.getElementById("e_mail");
+    var email = document.getElementById("email");
+    var label_mobile = document.getElementById("label_mobile");
+    var mobile = document.getElementById("mobile");
 
     var sendEmail = document.getElementById("sendEmail");
     var our_team_members = document.getElementById("our_team_members");
@@ -109,7 +188,6 @@ function myFunction() {
     var hr_name = document.getElementById("hr_name");
     var hr_des = document.getElementById("hr_des");
     var hr_email = document.getElementById("hr_email");
-
     var f_fs = document.getElementById("f_fs");
     var f_ms = document.getElementById("f_ms");
     var f_fs = document.getElementById("f_fs");
@@ -135,6 +213,13 @@ function myFunction() {
         services_link.innerHTML = "Services";
         services.innerHTML = "Services";
         contact_us.innerHTML = "Contact Us";
+        rrlSecurity.innerHTML = "RRL Security Pvt. Ltd.";
+        welcome1.innerHTML = "Welcome to RRL Security Pvt. Ltd., your trusted partner in comprehensive security solutions. With a steadfast commitment to safeguarding lives and assets, we stand at the forefront of the security industry, offering both security guard services and security guard hiring options. Our mission is to create an environment of trust and safety for individuals, businesses, and communities.";
+        hcp_1.innerHTML = "At RRL Security Pvt. Ltd., we understand that security is not just a service; it's a promise. With years of experience and a team of highly trained professionals, we specialize in providing top-tier security services that cater to the diverse needs of our clients. Whether you require a single security guard for an event or a dedicated team to secure your premises  round-the-clock,  we have the expertise to deliver solutions tailored to your specific requirements.";
+        hcp_2.innerHTML = "Our commitment extends beyond merely offering security services. We believe in empowering individuals and organizations by providing the opportunity to hire qualified and reliable security guards through our platform. By connecting experienced security professionals with those in need of their expertise, we contribute to the growth of a safer and more secure society.";
+        hcp_3.innerHTML = "What sets us apart is our unwavering dedication to excellence, integrity, and responsiveness. Our security guards are not just trained to be vigilant; they are ambassadors of safety who understand the importance of proactive prevention, effective communication, and a swift response to any potential threats.";
+        hcp_4.innerHTML = "Whether you're an individual seeking personal protection or a business aiming to enhance security measures, RRL Security Pvt. Ltd. is here to partner with you. We are your trusted shield, ensuring that you can go about your daily life and business operations with peace of mind. Join us in building a safer world together.";
+        view_more.innerHTML = "View More";
         we_are_hiring.innerHTML = "We are hiring";
         our_team.innerHTML = "Our Team";
         ms.innerHTML = "MALE SECURITY GUARD";
@@ -164,6 +249,14 @@ function myFunction() {
         tel_2.innerHTML = "9313431129";
         tel_3.innerHTML = "(0512)-222222222";
         join_us_today.innerHTML = "JOIN US TODAY !";
+        fn.innerHTML = "First Name";
+        first_name.innerHTML = "First Name";
+        ln.innerHTML = "Last Name";
+        last_name.innerHTML = "Last Name";
+        e_mail.innerHTML = "E-Mail";
+        email.innerHTML = "E-Mail Address";
+        label_mobile.innerHTML = "Mobile #";
+        mobile.innerHTML = "(123) 456-7890";
         sendEmail.innerHTML = "Submit";
         our_team_members.innerHTML = "Our Team Members";
         d1_name.innerHTML = "Radhakrishanan Nigam";
@@ -199,6 +292,13 @@ function myFunction() {
         services_link.innerHTML = "सेवाएं";
         services.innerHTML = "सेवाएं";
         contact_us.innerHTML = "संपर्क करें";
+        rrlSecurity.innerHTML = "आरआरएल सिक्योरिटी प्रा. लिमिटेड";
+        welcome1.innerHTML = "आरआरएल सिक्योरिटी प्राइवेट में आपका स्वागत है। लिमिटेड, व्यापक सुरक्षा समाधानों में आपका विश्वसनीय भागीदार। जीवन और संपत्ति की सुरक्षा के लिए दृढ़ प्रतिबद्धता के साथ, हम सुरक्षा उद्योग में सबसे आगे खड़े हैं, सुरक्षा गार्ड सेवाएं और सुरक्षा गार्ड भर्ती विकल्प दोनों प्रदान करते हैं। हमारा मिशन व्यक्तियों, व्यवसायों और समुदायों के लिए विश्वास और सुरक्षा का माहौल बनाना है।";
+        hcp_1.innerHTML = "आरआरएल सिक्योरिटी प्रा. लिमिटेड, हम समझते हैं कि सुरक्षा केवल एक सेवा नहीं है; यह एक वादा है। वर्षों के अनुभव और उच्च प्रशिक्षित पेशेवरों की एक टीम के साथ, हम शीर्ष स्तरीय सुरक्षा सेवाएँ प्रदान करने में माहिर हैं जो हमारे ग्राहकों की विविध आवश्यकताओं को पूरा करती हैं। चाहे आपको किसी कार्यक्रम के लिए एक सुरक्षा गार्ड की आवश्यकता हो या अपने परिसर को चौबीसों घंटे सुरक्षित रखने के लिए एक समर्पित टीम की, हमारे पास आपकी विशिष्ट आवश्यकताओं के अनुरूप समाधान प्रदान करने की विशेषज्ञता है।";
+        hcp_2.innerHTML = "हमारी प्रतिबद्धता केवल सुरक्षा सेवाएँ प्रदान करने तक ही सीमित नहीं है। हम अपने मंच के माध्यम से योग्य और विश्वसनीय सुरक्षा गार्डों को नियुक्त करने का अवसर प्रदान करके व्यक्तियों और संगठनों को सशक्त बनाने में विश्वास करते हैं। अनुभवी सुरक्षा पेशेवरों को उनकी विशेषज्ञता की आवश्यकता वाले लोगों के साथ जोड़कर, हम एक सुरक्षित और सुरक्षित समाज के विकास में योगदान करते हैं।";
+        hcp_3.innerHTML = "उत्कृष्टता, सत्यनिष्ठा और जवाबदेही के प्रति हमारा अटूट समर्पण ही हमें अलग करता है। हमारे सुरक्षा गार्ड सिर्फ सतर्क रहने के लिए ही प्रशिक्षित नहीं हैं; वे सुरक्षा के राजदूत हैं जो सक्रिय रोकथाम, प्रभावी संचार और किसी भी संभावित खतरे पर त्वरित प्रतिक्रिया के महत्व को समझते हैं।";
+        hcp_4.innerHTML = "चाहे आप व्यक्तिगत सुरक्षा चाहने वाले व्यक्ति हों या सुरक्षा उपायों को बढ़ाने का लक्ष्य रखने वाला व्यवसाय हों, आरआरएल सिक्योरिटी प्राइवेट। लिमिटेड आपके साथ साझेदारी करने के लिए यहां है। हम आपकी विश्वसनीय ढाल हैं, जो यह सुनिश्चित करते हैं कि आप मन की शांति के साथ अपने दैनिक जीवन और व्यावसायिक संचालन कर सकें। एक साथ मिलकर एक सुरक्षित विश्व के निर्माण में हमारा साथ दें।";
+        view_more.innerHTML = "और देखें";
         we_are_hiring.innerHTML = "हम भर्ती कर रहे हैं";
         our_team.innerHTML = "हमारी टीम";
         ms.innerHTML = "पुरुष सुरक्षा गार्ड";
@@ -228,6 +328,14 @@ function myFunction() {
         tel_2.innerHTML = "9313431129";
         tel_3.innerHTML = "(0512)-222222222";
         join_us_today.innerHTML = "आज ही शामिल हों !";
+        fn.innerHTML = "पहला नाम";
+        first_name.innerHTML = "पहला नाम";
+        ln.innerHTML = "उपनाम";
+        last_name.innerHTML = "उपनाम";
+        e_mail.innerHTML = "ई-मेल";
+        email.innerHTML = "ई-मेल";
+        label_mobile.innerHTML = "मोबाइल नंबर";
+        mobile.innerHTML = "(123) 456-7890";
         sendEmail.innerHTML = "जमा करना";
         our_team_members.innerHTML = "हमारी टीम के सदस्य";
         d1_name.innerHTML = "राधाकृष्णनन निगम";
@@ -253,6 +361,5 @@ function myFunction() {
         f_intro.innerHTML = "परिचय";
         f_services.innerHTML = "सेवा";
         f_contact.innerHTML = "संपर्क";
-        
     }
 }
