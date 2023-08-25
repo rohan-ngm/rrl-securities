@@ -50,7 +50,7 @@ function myFunction() {
 
     var title = document.getElementById("title");
 
-    var introduction = document.getElementById("intro");
+    var intro = document.getElementById("intro");
     var services_link = document.getElementById("services_link");
     var contact_us = document.getElementById("contact_us");
     var we_are_hiring = document.getElementById("we_are_hiring");
@@ -110,9 +110,28 @@ function myFunction() {
     var hr_des = document.getElementById("hr_des");
     var hr_email = document.getElementById("hr_email");
 
+    var f_fs = document.getElementById("f_fs");
+    var f_ms = document.getElementById("f_ms");
+    var f_fs = document.getElementById("f_fs");
+    var f_cm = document.getElementById("f_cm");
+    var f_es = document.getElementById("f_es");
+    var f_os = document.getElementById("f_os");
+    var f_bs = document.getElementById("f_bs");
+    var f_is = document.getElementById("f_is");
+    var f_rs = document.getElementById("f_rs");
+    var f_hs = document.getElementById("f_hs");
+    var f_ps = document.getElementById("f_ps");
+    var f_ss = document.getElementById("f_ss");
+    var f_cu = document.getElementById("f_cu");
+    var f_ot = document.getElementById("f_ot");
+    var f_au = document.getElementById("f_au");
+    var f_intro = document.getElementById("f_intro");
+    var f_services = document.getElementById("f_services");
+    var f_contact = document.getElementById("f_contact");
+
     if (language.value === "en") {
-        title = "RRL Security Pvt. Ltd.";
-        introduction = "Introduction";
+        title.innerHTML = "RRL Security Pvt. Ltd.";
+        intro.innerHTML = "Introduction";
         services_link.innerHTML = "Services";
         services.innerHTML = "Services";
         contact_us.innerHTML = "Contact Us";
@@ -156,9 +175,27 @@ function myFunction() {
         hr_name.innerHTML = "Supriya Nigam";
         hr_des.innerHTML = "HR (Human Resources)";
         hr_email.innerHTML = "hr-head@rrlsecurity.com";
+        f_fs.innerHTML = "FEMALE SECURITY GUARD";
+        f_ms.innerHTML = "MALE SECURITY GUARD";
+        f_fs.innerHTML = "FEMALE SECURITY GUARD";
+        f_cm.innerHTML = "CASH MANAGEMENT";
+        f_es.innerHTML = "EVENT SECURITY";
+        f_os.innerHTML = "OFFICE SECURITY";
+        f_bs.innerHTML = "BUILDING SECURITY GUARD";
+        f_is.innerHTML = "INDUSTRIAL SECURITY";
+        f_rs.innerHTML = "RETAIL SECURITY";
+        f_hs.innerHTML = "HOSPITAL SECURITY";
+        f_ps.innerHTML = "PROPERTY SECURITY";
+        f_ss.innerHTML = "SCHOOL SECURITY";
+        f_cu.innerHTML = "CONTACT US";
+        f_ot.innerHTML = "OUR TEAM";
+        f_au.innerHTML = "ABOUT US";
+        f_intro.innerHTML = "INTRODUCTION";
+        f_services.innerHTML = "SERVICES";
+        f_contact.innerHTML = "CONTACT";
     } else {
-        title = "आरआरएल सिक्योरिटी प्रा. लिमिटेड";
-        introduction = "परिचय";
+        title.innerHTML = "आरआरएल सिक्योरिटी प्रा. लिमिटेड";
+        intro.innerHTML = "परिचय";
         services_link.innerHTML = "सेवाएं";
         services.innerHTML = "सेवाएं";
         contact_us.innerHTML = "संपर्क करें";
@@ -199,5 +236,23 @@ function myFunction() {
         d2_des.innerHTML = "निदेशक";
         hr_name.innerHTML = "सुप्रिया निगम";
         hr_des.innerHTML = "एचआर (मानव संसाधन)";
+        f_fs.innerHTML = "महिला सुरक्षा गार्ड";
+        f_ms.innerHTML = "पुरुष सुरक्षा गार्ड";
+        f_cm.innerHTML = "नकदी प्रबंधन";
+        f_es.innerHTML = "घटना सुरक्षा";
+        f_os.innerHTML = "कार्यालय सुरक्षा";
+        f_bs.innerHTML = "बिल्डिंग सुरक्षा गार्ड";
+        f_is.innerHTML = "औद्योगिक सुरक्षा";
+        f_rs.innerHTML = "खुदरा सुरक्षा";
+        f_hs.innerHTML = "अस्पताल सुरक्षा";
+        f_ps.innerHTML = "संपत्ति सुरक्षा";
+        f_ss.innerHTML = "स्कूल सुरक्षा";
+        f_cu.innerHTML = "संपर्क करें";
+        f_ot.innerHTML = "हमारी टीम";
+        f_au.innerHTML = "हमारे बारे में";
+        f_intro.innerHTML = "परिचय";
+        f_services.innerHTML = "सेवा";
+        f_contact.innerHTML = "संपर्क";
+        
     }
 }
