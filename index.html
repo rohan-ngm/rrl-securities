@@ -42,17 +42,13 @@
                         <li class="active"><a href="#home" class="scrollLink" id="intro">Introduction<span
                                     class="sr-only">(current)</span></a></li>
                         <li><a href="#services" class="scrollLink" id="services_link">Services</a></li>
-                        <li><a href="#contact-us" class="scrollLink" id="contact_us">Contact Us</a></li>
+                        <li><a href="#contact-us" class="scrollLink" id="contact_us_1">Contact Us</a></li>
                         <li><a href="#we-are-hiring" class="scrollLink" id="we_are_hiring">We are hiring</a></li>
                         <li><a href="#our-team" class="scrollLink" id="our_team">Our Team</a></li>
-                        <li style="margin-top: 2%;font-weight: 600;color: #464646;" class=".navbar-default .navbar">
-                            <select class="form-select scrollLink" id="languages_1" name="languages_1"
-                                onchange="myFunction_1()"
-                                style="background-color: #212936; border: transparent; padding-left: 3%;">
-                                <option value="en">ENGLISH</option>
-                                <option value="hi">HINDI - हिन्दी</option>
-                            </select>
-                        </li>
+                        <li><a href="#english" class="scrollLink" onclick="updateLanguageContent('en')"
+                                id="english">ENGLISH</a></li>
+                        <li><a href="#hindi" class="scrollLink" onclick="updateLanguageContent('hi')"
+                                id="hindi">हिन्दी</a></li>
                     </ul>
                 </div>
             </div>
@@ -113,7 +109,7 @@
                             mind. Join us in building a safer world together.</p>
                         </p>
                         <div class="home-btn">
-                            <button class="btn btn-primary view-more-button" onclick="toggleContent()"
+                            <button class="btn btn-primary view-more-button" onclick="toggleContent('${onchange}')"
                                 id="view_more">View
                                 More</button>
                         </div>
@@ -161,13 +157,14 @@
                     </div>
                 </div>
                 <div class="cover"></div>
-                <div class="popup" style="background-color: #212936;">
+                <div class="popup" style="background-color: rgba(0, 0, 0, .0001); z-index: 1;">
                     <p style="text-align: center; font-weight: bold; margin-top: 5%;">Please choose your language /
                         कृपया अपनी भाषा चुनें</p>
                     <select class="form-select scrollLink" id="languages_2" name="languages_2" onchange="myFunction_2()"
-                        style="background-color: #212936; margin-left: 35%; margin-top: 5%;">
+                        style="background-color: rgba(0, 0, 0, .0001); margin-left: 35%; margin-top: 5%; height: 25px;">
+                        <option value="default">Select / चुनें</option>
                         <option value="en">ENGLISH</option>
-                        <option value="hi">HINDI - हिन्दी</option>
+                        <option value="hi">हिन्दी</option>
                     </select>
                 </div>
                 <div class="portfolio-wrap">
@@ -454,7 +451,7 @@
         <div class="heading">
             <div class="title text-center arrow-left">
                 <img class="hidden-xs" src="assets/images/left-arrow.png" alt="" />
-                <h4 id="contact_us">Contact US</h4>
+                <h4 id="contact_us_1">Contact US</h4>
             </div>
         </div>
         </div>
@@ -464,17 +461,21 @@
                     <div class="contact-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
-                    <a href="tel:" style="text-align: center;font-weight: bolder;" id="tel_1">7080427944</a>
+                    <a href="tel:" style="text-align: center;font-weight: bolder;" id="tel_1">8604911129</a>
                     <br><br>
-                    <a href="tel:" style="text-align: center; font-weight: bolder;" id="tel_2">9313431129</a>
+                    <a href="tel:" style="text-align: center; font-weight: bolder;" id="tel_2">9936814362</a>
+                    <br><br>
+                    <a href="tel:" style="text-align: center; font-weight: bolder;" id="tel_3">9313431129</a>
                     <div class="contact-icon">
-                        <i class="fas fa-phone"></i>
+                        <i class="fab fa-whatsapp"></i>
                     </div>
-                    <a href="tel:" style="text-align: center;font-weight: bolder;" id="tel_3">(0512)-222222222</a>
+                    <a href="tel:" style="text-align: center;font-weight: bolder;" id="tel_4">8604911129</a>
+                    <br><br>
+                    <a href="tel:" style="text-align: center;font-weight: bolder;" id="tel_5">9936814362</a>
                     <div class="contact-icon">
                         <i class="fas fa-envelope"></i>
                     </div>
-                    <a href="mailto:" style="text-align: center;font-weight: bolder;">info@rrlsecurity.com</a>
+                    <a href="mailto:" style="text-align: center;font-weight: bolder;">admin@rrlsecurity.com</a>
                     <br><br>
                     <a href="mailto:" style="text-align: center; font-weight: bolder;">hr@rrlrrlsecurity.com</a>
                 </div>
@@ -563,7 +564,7 @@
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="team-member">
                             <img class="img-circle" src="assets/images/team/1.webp" alt="" />
-                            <h5 id="d1_name">Radhakrishanan Nigam</h5>
+                            <h5 id="d1_name">R. K. Nigam</h5>
                             <p id="d1_des">Director</p>
                             <p id="d1_email">director@rrlsecurity.com</p>
                         </div>
@@ -580,7 +581,7 @@
                         <div class="team-member">
                             <img class="img-circle" src="assets/images/team/2.webp" alt="" />
                             <h5 id="hr_name">Supriya Nigam</h5>
-                            <p id="hr_des">HR (Human Resources)</p>
+                            <p id="hr_des">Director</p>
                             <p id="hr_email">hr-head@rrlsecurity.com</p>
                         </div>
                     </div>

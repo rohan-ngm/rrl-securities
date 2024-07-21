@@ -668,13 +668,13 @@ h1 span {
 /*Home Page Style*/
 
 #home {
-    background-color: #212936;
+    background-color: #5b92eb;
     color: #fff;
 }
 
 .homepage-style {
     padding-top: 100px;
-}
+} 
 
 .homepage-style .top-arrow img {
     margin-top: 20px;
@@ -1217,9 +1217,10 @@ h1 span {
     position: fixed;
     border: solid 1px black;
     width: 400px;
-    height: 200px;
+    height: 135px;
     left: 50%;
     top: 50%;
+    border-radius: 20px;
     margin: -100px 0 0 -100px;
     display: none;
     background-color: white;

@@ -1,4 +1,3 @@
-
 function toggleContent() {
     var hiddenContent = document.getElementById("hidden_content");
     var hcp_1 = document.getElementById("hcp_1");
@@ -6,7 +5,7 @@ function toggleContent() {
     var hcp_3 = document.getElementById("hcp_3");
     var hcp_4 = document.getElementById("hcp_4");
     var button = document.querySelector(".view-more-button");
-    var language = document.getElementById("languages");
+    var language = "en";
     if (hiddenContent.style.display === "none") {
         hiddenContent.style.display = "block";
         if (language.value === "en") {
@@ -125,12 +124,11 @@ document.getElementById("sendEmail").addEventListener("click", function () {
 
 function updateLanguageContent(languageValue) {
     if (languageValue === "en") {
-        languages_1.value = languages_2.value = "en";
         title.innerHTML = "RRL Security Pvt. Ltd.";
         intro.innerHTML = "Introduction";
         services_link.innerHTML = "Services";
         services.innerHTML = "Services";
-        contact_us.innerHTML = "Contact Us";
+        contact_us_1.innerHTML = "Contact Us";
         rrlSecurity.innerHTML = "RRL Security Pvt. Ltd.";
         welcome1.innerHTML = "Welcome to RRL Security Pvt. Ltd., your trusted partner in comprehensive security solutions. With a steadfast commitment to safeguarding lives and assets, we stand at the forefront of the security industry, offering both security guard services and security guard hiring options. Our mission is to create an environment of trust and safety for individuals, businesses, and communities.";
         hcp_1.innerHTML = "At RRL Security Pvt. Ltd., we understand that security is not just a service; it's a promise. With years of experience and a team of highly trained professionals, we specialize in providing top-tier security services that cater to the diverse needs of our clients. Whether you require a single security guard for an event or a dedicated team to secure your premises  round-the-clock,  we have the expertise to deliver solutions tailored to your specific requirements.";
@@ -162,10 +160,11 @@ function updateLanguageContent(languageValue) {
         property_security_description.innerHTML = "Property security is of paramount importance, and our dedicated team of security guards takes it upon themselves to ensure the safeguarding of your valuable assets. With their vigilant presence and unwavering commitment, our security guards act as the first line of defense against potential threats to your property. From residential complexes to commercial establishments, our guards are trained to employ a combination of proactive surveillance and quick response to maintain a secure environment. They conduct thorough perimeter checks, monitor access points, and are skilled in identifying and addressing any suspicious activities promptly. Our security guards are not only equipped with the necessary skills and training, but they also carry a sense of responsibility to uphold the integrity of your property's security. vWith their watchful eyes and dedication, you can trust that your property is in capable hands, ensuring a sense of safety and peace for both you and your stakeholders."
         school_security.innerHTML = "SCHOOL SECURITY";
         school_security_description.innerHTML = "The safety and security of students within a school environment are paramount, and this responsibility is diligently undertaken by our team of dedicated security guards. At schools, our security guards play a pivotal role in creating a safe and conducive learning environment for students, teachers, and staff members alike. Trained to be vigilant, approachable, and responsive, our security personnel are a reassuring presence that ensures unauthorized individuals are kept at bay and potential threats are promptly addressed. From monitoring access points to conducting routine patrols, our security guards employ their expertise to mitigate risks and prevent any disruptions that may compromise the well-being of the school community. With a strong commitment to safeguarding both the physical and emotional security of everyone on campus, our security guards uphold a culture of safety that fosters a sense of trust and tranquility, allowing students to focus on their studies and personal growth without worry."
-        contact_us.innerHTML = "Contact US";
-        tel_1.innerHTML = "7080427944";
-        tel_2.innerHTML = "9313431129";
-        tel_3.innerHTML = "(0512)-222222222";
+        // contact_us.innerHTML = "Contact US";
+        contact_us_1.innerHTML = "Contact US";
+        tel_1.innerHTML = "8604911129";
+        tel_2.innerHTML = "9936814362";
+        tel_3.innerHTML = "9313431129";
         join_us_today.innerHTML = "JOIN US TODAY !";
         fn.innerHTML = "First Name";
         first_name.innerHTML = "First Name";
@@ -204,13 +203,15 @@ function updateLanguageContent(languageValue) {
         f_intro.innerHTML = "INTRODUCTION";
         f_services.innerHTML = "SERVICES";
         f_contact.innerHTML = "CONTACT";
+        $(".popup").fadeOut(500);
+        $(".cover").fadeOut(500);
     } else {
-        languages_1.value = languages_2.value = "hi";
         title.innerHTML = "आरआरएल सिक्योरिटी प्रा. लिमिटेड";
         intro.innerHTML = "परिचय";
         services_link.innerHTML = "सेवाएं";
         services.innerHTML = "सेवाएं";
-        contact_us.innerHTML = "संपर्क करें";
+        // contact_us.innerHTML = "संपर्क करें";
+        contact_us_1.innerHTML = "संपर्क करें";
         rrlSecurity.innerHTML = "आरआरएल सिक्योरिटी प्रा. लिमिटेड";
         welcome1.innerHTML = "आरआरएल सिक्योरिटी प्राइवेट में आपका स्वागत है। लिमिटेड, व्यापक सुरक्षा समाधानों में आपका विश्वसनीय भागीदार। जीवन और संपत्ति की सुरक्षा के लिए दृढ़ प्रतिबद्धता के साथ, हम सुरक्षा उद्योग में सबसे आगे खड़े हैं, सुरक्षा गार्ड सेवाएं और सुरक्षा गार्ड भर्ती विकल्प दोनों प्रदान करते हैं। हमारा मिशन व्यक्तियों, व्यवसायों और समुदायों के लिए विश्वास और सुरक्षा का माहौल बनाना है।";
         hcp_1.innerHTML = "आरआरएल सिक्योरिटी प्रा. लिमिटेड, हम समझते हैं कि सुरक्षा केवल एक सेवा नहीं है; यह एक वादा है। वर्षों के अनुभव और उच्च प्रशिक्षित पेशेवरों की एक टीम के साथ, हम शीर्ष स्तरीय सुरक्षा सेवाएँ प्रदान करने में माहिर हैं जो हमारे ग्राहकों की विविध आवश्यकताओं को पूरा करती हैं। चाहे आपको किसी कार्यक्रम के लिए एक सुरक्षा गार्ड की आवश्यकता हो या अपने परिसर को चौबीसों घंटे सुरक्षित रखने के लिए एक समर्पित टीम की, हमारे पास आपकी विशिष्ट आवश्यकताओं के अनुरूप समाधान प्रदान करने की विशेषज्ञता है।";
@@ -242,10 +243,10 @@ function updateLanguageContent(languageValue) {
         property_security_description.innerHTML = "संपत्ति की सुरक्षा अत्यंत महत्वपूर्ण है, और सुरक्षा गार्डों की हमारी समर्पित टीम आपकी मूल्यवान संपत्तियों की सुरक्षा सुनिश्चित करने का जिम्मा अपने ऊपर लेती है। अपनी सतर्क उपस्थिति और अटूट प्रतिबद्धता के साथ, हमारे सुरक्षा गार्ड आपकी संपत्ति पर संभावित खतरों के खिलाफ रक्षा की पहली पंक्ति के रूप में कार्य करते हैं। आवासीय परिसरों से लेकर व्यावसायिक प्रतिष्ठानों तक, हमारे गार्डों को सुरक्षित वातावरण बनाए रखने के लिए सक्रिय निगरानी और त्वरित प्रतिक्रिया के संयोजन को नियोजित करने के लिए प्रशिक्षित किया जाता है। वे पूरी तरह से परिधि की जांच करते हैं, पहुंच बिंदुओं की निगरानी करते हैं, और किसी भी संदिग्ध गतिविधियों को तुरंत पहचानने और संबोधित करने में कुशल हैं। हमारे सुरक्षा गार्ड न केवल आवश्यक कौशल और प्रशिक्षण से सुसज्जित हैं, बल्कि वे आपकी संपत्ति की सुरक्षा की अखंडता को बनाए रखने के लिए जिम्मेदारी की भावना भी रखते हैं। vउनकी सतर्क निगाहों और समर्पण के साथ, आप भरोसा कर सकते हैं कि आपकी संपत्ति सक्षम हाथों में है, जो आपके और आपके हितधारकों दोनों के लिए सुरक्षा और शांति की भावना सुनिश्चित करती है।"
         school_security.innerHTML = "स्कूल सुरक्षा";
         school_security_description.innerHTML = "स्कूल के माहौल में छात्रों की सुरक्षा और सुरक्षा सर्वोपरि है, और यह जिम्मेदारी समर्पित सुरक्षा गार्डों की हमारी टीम द्वारा पूरी लगन से निभाई जाती है। स्कूलों में, हमारे सुरक्षा गार्ड छात्रों, शिक्षकों और स्टाफ सदस्यों के लिए एक सुरक्षित और अनुकूल शिक्षण वातावरण बनाने में महत्वपूर्ण भूमिका निभाते हैं। सतर्क, पहुंच योग्य और उत्तरदायी होने के लिए प्रशिक्षित, हमारे सुरक्षाकर्मी एक आश्वस्त उपस्थिति हैं जो यह सुनिश्चित करते हैं कि अनधिकृत व्यक्तियों को दूर रखा जाए और संभावित खतरों का तुरंत समाधान किया जाए। पहुंच बिंदुओं की निगरानी से लेकर नियमित गश्त करने तक, हमारे सुरक्षा गार्ड जोखिमों को कम करने और स्कूल समुदाय की भलाई से समझौता करने वाले किसी भी व्यवधान को रोकने के लिए अपनी विशेषज्ञता का उपयोग करते हैं। परिसर में सभी की शारीरिक और भावनात्मक सुरक्षा की मजबूत प्रतिबद्धता के साथ, हमारे सुरक्षा गार्ड सुरक्षा की संस्कृति को कायम रखते हैं जो विश्वास और शांति की भावना को बढ़ावा देता है, जिससे छात्रों को बिना किसी चिंता के अपनी पढ़ाई और व्यक्तिगत विकास पर ध्यान केंद्रित करने की अनुमति मिलती है।"
-        contact_us.innerHTML = "संपर्क करें";
-        tel_1.innerHTML = "7080427944";
-        tel_2.innerHTML = "9313431129";
-        tel_3.innerHTML = "(0512)-222222222";
+        contact_us_1.innerHTML = "संपर्क करें";
+        tel_1.innerHTML = "8604911129";
+        tel_2.innerHTML = "9936814362";
+        tel_3.innerHTML = "9313431129";
         join_us_today.innerHTML = "आज ही शामिल हों !";
         fn.innerHTML = "पहला नाम";
         first_name.innerHTML = "पहला नाम";
@@ -257,12 +258,12 @@ function updateLanguageContent(languageValue) {
         mobile.innerHTML = "(123) 456-7890";
         sendEmail.innerHTML = "जमा करना";
         our_team_members.innerHTML = "हमारी टीम के सदस्य";
-        d1_name.innerHTML = "राधाकृष्णनन निगम";
+        d1_name.innerHTML = "आर. के. निगम";
         d1_des.innerHTML = "निदेशक";
         d2_name.innerHTML = "रोहन निगम";
         d2_des.innerHTML = "निदेशक";
         hr_name.innerHTML = "सुप्रिया निगम";
-        hr_des.innerHTML = "एचआर (मानव संसाधन)";
+        hr_des.innerHTML = "निदेशक";
         f_fs.innerHTML = "महिला सुरक्षा गार्ड";
         f_ms.innerHTML = "पुरुष सुरक्षा गार्ड";
         f_cm.innerHTML = "नकदी प्रबंधन";
