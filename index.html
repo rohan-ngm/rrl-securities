@@ -1,674 +1,457 @@
-<!doctype html>
-<html class="no-js">
-
-<meta name="description"
-    content="RRl Security Pvt. Ltd. is an organisation which provides you with class one security solutions for your business, property, childrens, etc.">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title id="title">RRL Security Pvt. Ltd.</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-    <link rel="stylesheet" href="assets/css/plugins.css" />
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/responsive.css" />
-    <link rel="shortcut icon" href="assets/images/favico.png" type="image/png" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RRL Security Pvt. Ltd.</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: white;
+            color: blue;
+            font-family: Arial, sans-serif;
+            margin: 0;
+        }
+
+        header {
+            background-color: #333;
+            padding: 10px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            color: red;
+        }
+
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 20%;
+        }
+
+        .carousel-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .carousel-container .about-text {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .carousel-container .carousel {
+            flex: 1;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                display: none;
+                width: 100%;
+                text-align: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            .carousel-container {
+                flex-direction: column;
+            }
+
+            .carousel-container .about-text,
+            .carousel-container .carousel {
+                flex: none;
+                width: 100%;
+            }
+
+            .full-width {
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            .carousel-item img {
+                width: 100%;
+                /* Ensure images take up the full column width */
+            }
+
+            .row.no-gutters {
+                margin-right: 0;
+                margin-left: 0;
+            }
+
+            .col-md-6 {
+                padding: 0;
+                /* Remove padding between columns */
+            }
+
+        }
+    </style>
 </head>
 
-<body data-spy="scroll" data-target="#main-navbar">
-    <div class='preloader'>
-        <div class='loaded'>&nbsp;</div>
-    </div>
-    <div id="menubar" class="main-menu">
-        <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html" style="position: fixed;"><img src="assets/images/logo.jpg"
-                            alt="" style="height: 60px;" /></a>
-                </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="#home" class="scrollLink" id="intro">Introduction<span
-                                    class="sr-only">(current)</span></a></li>
-                        <li><a href="#services" class="scrollLink" id="services_link">Services</a></li>
-                        <li><a href="#contact_us_form" class="scrollLink" id="contact_us_1">Contact Us</a></li>
-                        <li><a href="#we-are-hiring" class="scrollLink" id="we_are_hiring">We are hiring</a></li>
-                        <li><a href="#our-team" class="scrollLink" id="our_team">Our Team</a></li>
-                        <li><a href="#english" class="scrollLink" onclick="updateLanguageContent('en')"
-                                id="english">ENGLISH</a></li>
-                        <li><a href="#hindi" class="scrollLink" onclick="updateLanguageContent('hi')"
-                                id="hindi">हिन्दी</a></li>
-                    </ul>
-                </div>
+<body>
+    <header>
+        <nav>
+            <img src="images/logo.ico">
+            <h1>RRL Security Pvt. Ltd.</h1>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
             </div>
+            <ul id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </nav>
-    </div>
-
-    <header id="home" name="home" class="sections">
-        <div class="container">
-            <div class="row homepage-style">
-                <div class="top-arrow hidden-xs text-center">
-                    <img src="assets/images/top-arrow.png" alt="Top Arrow" style="height: 50px;">
-                </div>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="unique-apps" id="content">
-                        <h2 style="font-weight: bold;" id="rrlSecurity">RRL Security Pvt. Ltd.</h2>
-                        <p style="text-align: justify;" id="welcome1">
-                            Welcome to RRL Security Pvt. Ltd., your trusted partner in comprehensive security
-                            solutions.
-                            With a steadfast commitment to safeguarding lives and assets, we stand at the forefront of
-                            the
-                            security industry, offering both security guard services and security guard hiring options.
-                            Our
-                            mission is to create an environment of trust and safety for individuals, businesses, and
-                            communities.
-                        </p>
-                        <p id="hidden_content" style="display: none; text-align: justify;">
-                        <p id="hcp_1" style="display: none; text-align: justify;">At RRL Security Pvt. Ltd., we
-                            understand that security is not just a service; it's a
-                            promise.
-                            With years of experience and a team of highly trained professionals, we specialize in
-                            providing
-                            top-tier security services that cater to the diverse needs of our clients. Whether you
-                            require a
-                            single security guard for an event or a dedicated team to secure your premises
-                            round-the-clock,
-                            we have the expertise to deliver solutions tailored to your specific requirements.</p>
-                        <br>
-                        <p id="hcp_2" style="display: none; text-align: justify;">Our commitment extends beyond merely
-                            offering security services. We believe in empowering
-                            individuals and organizations by providing the opportunity to hire qualified and reliable
-                            security guards through our platform. By connecting experienced security professionals with
-                            those
-                            in need of their expertise, we contribute to the growth of a safer and more secure society.
-                        </p>
-                        <br>
-                        <p id="hcp_3" style="display: none; text-align: justify;">What sets us apart is our unwavering
-                            dedication to excellence, integrity, and
-                            responsiveness.
-                            Our security guards are not just trained to be vigilant; they are ambassadors of safety who
-                            understand the importance of proactive prevention, effective communication, and a swift
-                            response
-                            to any potential threats.</p>
-                        <br>
-                        <p id="hcp_4" style="display: none; text-align: justify;">Whether you're an individual seeking
-                            personal protection or a business aiming to enhance
-                            security measures, RRL Security Pvt. Ltd. is here to partner with you. We are your trusted
-                            shield, ensuring that you can go about your daily life and business operations with peace of
-                            mind. Join us in building a safer world together.</p>
-                        </p>
-                        <div class="home-btn">
-                            <button class="btn btn-primary view-more-button" onclick="toggleContent('${onchange}')"
-                                id="view_more">View
-                                More</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="slider-area">
-                        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"
-                            data-interval="3000">
-                            <ol class="carousel-indicators">
-                                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-                                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
-                            </ol>
-                            <div class="carousel-inner" role="listbox" name="carousel-inner">
-                                <div class="item active" style="max-width: 100%; height: auto;">
-                                    <img src="assets/images/1.webp" alt="Slide 1">
-                                </div>
-                                <div class="item" style="max-width: 100%; height: auto;">
-                                    <img src="assets/images/2.webp" alt="Slide 2">
-                                </div>
-                                <div class="item" style="max-width: 100%; height: auto;">
-                                    <img src="assets/images/3.webp" alt="Slide 3">
-                                </div>
-                                <div class="item" style="max-width: 100%; height: auto;">
-                                    <img src="assets/images/4.webp" alt="Slide 4">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </header>
 
-    <section class="sections">
-        <div class="container">
-            <div class="row">
-                <div class="heading">
-                    <div class="title text-center arrow-right">
-                        <h4 id="services">SERVICES</h4>
-                        <img class="hidden-xs" src="assets/images/right-arrow.png" alt="" />
-                    </div>
+    <main>
+        <section id="about" style="padding: 5%;">
+            <div class="carousel-container">
+                <div class="about-text" style="padding: 5%;">
+                    <h2>About Us</h2>
+                    <p>Welcome to RRL Security Pvt. Ltd., your trusted partner in comprehensive security solutions. With
+                        a steadfast commitment to safeguarding lives and assets, we stand at the forefront of the
+                        security industry, offering a wide range of security services tailored to meet the diverse needs
+                        of our clients.
+
+                        At RRL Security Pvt. Ltd., we understand that security is not just a service; it's a promise.
+                        Our team of highly trained and professional security guards are dedicated to providing top-tier
+                        security services that ensure the safety and protection of individuals, businesses, and
+                        communities.
+
+                        What sets us apart is our unwavering dedication to excellence, integrity, and responsiveness.
+                        Our
+                        security guards are not just trained to be vigilant; they are ambassadors of safety who
+                        understand
+                        the importance of proactive prevention, effective communication, and a swift response to any
+                        potential threats.
+
+                        Whether you're an individual seeking personal protection or a business aiming to enhance
+                        security
+                        measures, RRL Security Pvt. Ltd. is here to partner with you. We are your trusted shield,
+                        ensuring
+                        that you can go about your daily life and business operations with peace of mind. Join us in
+                        building a safer world together.</p>
                 </div>
-                <div class="cover"></div>
-                <div class="popup" style="background-color: rgba(0, 0, 0, .0001); z-index: 1;">
-                    <p style="text-align: center; font-weight: bold; margin-top: 5%;">Please choose your language /
-                        कृपया अपनी भाषा चुनें</p>
-                    <select class="form-select scrollLink" id="languages_2" name="languages_2" onchange="myFunction_2()"
-                        style="background-color: rgba(0, 0, 0, .0001); margin-left: 35%; margin-top: 5%; height: 25px;">
-                        <option value="default">Select / चुनें</option>
-                        <option value="en">ENGLISH</option>
-                        <option value="hi">हिन्दी</option>
-                    </select>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner" style="border-radius: 30px;">
+                        <div class="carousel-item active">
+                            <img src="images/1.jpeg" class="d-block w-100" alt="Image 1">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/2.jpeg" class="d-block w-100" alt="Image 2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/3.jpeg" class="d-block w-100" alt="Image 3">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="images/4.jpeg" class="d-block w-100" alt="Image 3">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
                 </div>
-                <div class="portfolio-wrap">
-                    <div class="portfolio">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <img src="assets/images/3.webp" alt="" />
+            </div>
+        </section>
+        <section id="services" style="padding: 5%;>
+            <div class="container-fluid full-width"> <!-- Changed to container-fluid for full-width -->
+                <h2>Our Services</h2>
+                <div id="services-carousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#services-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#services-carousel" data-slide-to="1"></li>
+                        <li data-target="#services-carousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row no-gutters">
+                                <div class="col-md-6">
+                                    <div class="service-card"  style="padding: 10%;">
+                                        <img src="images/maleSecurity.png" alt="Service 1">
+                                        <h3>Male/Female Security Guards</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed
+                                            euismod, nunc nec aliquet aliquam, nisl mauris aliquam nunc, id aliquam nunc
+                                            nisl vel nunc.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <<div class="service-card"  style="padding: 10%;">
+                                        <img src="images/event.png" alt="Service 2">
+                                        <h3>Event Security</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed
+                                            euismod, nunc nec aliquet aliquam, nisl mauris aliquam nunc, id aliquam nunc
+                                            nisl vel nunc.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="portfolio-item" style="text-align: justify;">
-                                <h4 id="male_security">MALE SECURITY GUARD</h4>
-                                <p id="male_security_description">
-                                    Our security guards are the embodiment of vigilance and reliability, standing as
-                                    unwavering sentinels of safety. Trained to perfection, they bring a sense of
-                                    assurance to any environment they secure. Equipped with comprehensive expertise and
-                                    a commitment to safeguarding lives and property, our security guards are not just
-                                    protectors, but also ambassadors of peace. With a keen eye for detail and a
-                                    proactive approach, they ensure that every corner is shielded from potential
-                                    threats. Our security guards are not just professionals; they are the guardians of
-                                    tranquility, ensuring that you can carry on with confidence in a secure environment.
-                                    Trust in their dedication and experience as they stand as the first line of defense
-                                    against any challenge, demonstrating our unwavering commitment to your safety.
-                                </p>
+                        <div class="carousel-item">
+                            <div class="row no-gutters">
+                                <div class="col-md-6">
+                                    <<div class="service-card"  style="padding: 10%;">
+                                        <img src="images/officeSecurity.jpg" alt="Service 3">
+                                        <h3>Office Security</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed
+                                            euismod, nunc nec aliquet aliquam, nisl mauris aliquam nunc, id aliquam nunc
+                                            nisl vel nunc.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="service-card"  style="padding: 10%;">
+                                        <img src="images/service4.jpg" alt="Service 4">
+                                        <h3>Building Security</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed
+                                            euismod, nunc nec aliquet aliquam, nisl mauris aliquam nunc, id aliquam nunc
+                                            nisl vel nunc.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row no-gutters">
+                                <div class="col-md-6">
+                                    <div class="service-card"  style="padding: 10%;">
+                                        <img src="images/service5.jpg" alt="Service 5">
+                                        <h3>Industrial Security</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed
+                                            euismod, nunc nec aliquet aliquam, nisl mauris aliquam nunc, id aliquam nunc
+                                            nisl vel nunc.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="service-card"  style="padding: 10%;">
+                                        <img src="images/service6.jpg" alt="Service 6">
+                                        <h3>Retail Security</h3>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed
+                                            euismod, nunc nec aliquet aliquam, nisl mauris aliquam nunc, id aliquam nunc
+                                            nisl vel nunc.</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="portfolio-item" style="text-align: justify;">
-                                <h4 id="female_security">FEMALE SECURITY GUARD</h4>
-                                <p id="female_security_description">
-                                    Introducing our exceptional team of female security guards – a testament to
-                                    empowerment, strength, and professionalism. At RRL Security Pvt. Ltd. we
-                                    recognize the
-                                    importance of diversity and inclusivity in the security industry. Our female
-                                    security guards are highly trained, skilled, and committed to providing top-tier
-                                    security services to our clients. With an acute sense of situational awareness and a
-                                    unique ability to foster a secure environment, they bring a distinctive touch to
-                                    every assignment. Their presence signifies not only a commitment to safety but also
-                                    a representation of equality in the field. Trust in our female security guards to
-                                    bring a balance of empathy and authority, ensuring your peace of mind while
-                                    upholding our unwavering standards of security excellence.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <img src="assets/images/fsg.webp" alt="" />
-                        </div>
+                    <a class="carousel-control-prev" href="#services-carousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#services-carousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+       
+
+        <section id="contact" style="padding: 5%;">
+            <div class="container">
+                <h2>Contact Us</h2>
+                <div class="row g-4"> <!-- Added Bootstrap's gutter class for spacing between columns -->
+                    <div class="col-md-6">
+                        <h3>Get in Touch</h3>
+                        <p>If you have any questions or inquiries, feel free to reach out to us. We are here to assist you.</p>
+                        <ul>
+                            <li><strong>Phone:</strong> +1 123-456-7890</li>
+                            <li><strong>WhatsApp:</strong> +1 123-456-7890</li>
+                            <li><strong>Email:</strong> info@example.com</li>
+                        </ul>
                     </div>
-                    <div class="portfolio">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <img src="assets/images/cm.webp" alt="" />
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="portfolio-item" style="text-align: justify;">
-                                <h4 id="cash_management">CASH MANAGEMENT</h4>
-                                <p id="cash_management_description">
-                                    In the realm of modern business, effective cash management is paramount to ensuring
-                                    financial stability and smooth operations. At RRL Security Pvt. Ltd. our
-                                    dedicated
-                                    team of security guards goes beyond traditional security roles to provide
-                                    comprehensive cash management solutions that safeguard your financial assets. Our
-                                    highly trained professionals are not only vigilant guardians but also adept cash
-                                    handlers who are well-versed in the intricacies of secure cash handling procedures.
-                                    From monitoring cash movements and maintaining accurate records to facilitating
-                                    secure cash transfers, our security guards bring a heightened level of expertise to
-                                    cash management. With an unwavering commitment to integrity and accountability, we
-                                    ensure that your valuable assets remain safeguarded at every step. Trust RRL
-                                    Security Pvt. Ltd. for seamless cash management that not only ensures security but
-                                    also
-                                    bolsters your financial confidence.
-                                </p>
+                    <div class="col-md-6">
+                        <h3>Send us a Message</h3>
+                        <form>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Enter your name">
                             </div>
-                        </div>
-                    </div>
-                    <div class="portfolio">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="portfolio-item" style="text-align: justify;">
-                                <h4 id="event_security">EVENT SECURITY</h4>
-                                <p id="event_security_description">
-                                    Event security is a critical aspect that demands meticulous attention and effective
-                                    management to ensure the safety and smooth execution of any gathering. Our dedicated
-                                    team of highly trained security guards takes on the responsibility of event security
-                                    with utmost professionalism and precision. From grand celebrations to corporate
-                                    conferences, our security guards are adept at creating a secure environment that
-                                    allows attendees to focus on enjoying the event without worries. With a keen eye for
-                                    detail and a proactive approach, our security personnel manage crowd control, access
-                                    points, and emergency response, ensuring that every aspect of the event remains
-                                    under vigilant watch. Whether it's a small-scale affair or a large-scale festival,
-                                    our security guards are well-equipped to handle any situation, ensuring that the
-                                    event unfolds seamlessly and everyone present feels secure and protected.
-                                </p>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
                             </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <img src="assets/images/es.webp" alt="" />
-                        </div>
-                    </div>
-                    <div class="portfolio">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <img src="assets/images/3.webp" alt="" />
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="portfolio-item" style="text-align: justify;">
-                                <h4 id="office_security">OFFICE SECURITY</h4>
-                                <p id="office_security_description">
-                                    Office security is of paramount importance, and our dedicated team of security
-                                    guards is here to ensure a safe and secure environment for your workplace. With a
-                                    vigilant presence and a deep commitment to safeguarding your office premises, our
-                                    security guards play a pivotal role in maintaining order and deterring potential
-                                    security threats. They are meticulously trained to monitor access points, verify
-                                    identities, and enforce security protocols, creating a strong deterrent against
-                                    unauthorized entry. Beyond their physical presence, our security guards are skilled
-                                    in crisis management, responding swiftly and effectively to emergencies while
-                                    ensuring minimal disruption to daily operations. By collaborating seamlessly with
-                                    your team, they contribute to a cohesive security strategy that fosters a sense of
-                                    safety among employees and visitors alike. At RRL Security Pvt. Ltd., we understand
-                                    that a secure office environment is not just a necessity; it's the foundation upon
-                                    which productivity and peace of mind thrive.
-                                </p>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
                             </div>
-                        </div>
-                    </div>
-                    <div class="portfolio">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="portfolio-item" style="text-align: justify;">
-                                <h4 id="building_security">BUILDING SECURITY GUARD</h4>
-                                <p id="building_security_description">
-                                    Security guards play a vital role in ensuring the safety and protection of
-                                    buildings. With a watchful presence and a keen eye for detail, security guards
-                                    effectively safeguard entrances, monitor surveillance systems, and control access
-                                    points, creating a secure environment for both occupants and assets. Their
-                                    continuous patrolling and diligent monitoring deter unauthorized access, preventing
-                                    potential threats from gaining foothold. Whether it's a residential complex,
-                                    commercial establishment, or industrial facility, security guards provide a sense of
-                                    assurance and deterrence, working tirelessly to maintain order and respond promptly
-                                    to any security breaches. Their role goes beyond physical presence; they act as the
-                                    first line of defense, upholding the integrity of the building's security
-                                    infrastructure and fostering a secure atmosphere that promotes peace of mind for all
-                                    those within.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <img src="assets/images/bs.webp" alt="" />
-                        </div>
-                    </div>
-                    <div class="portfolio">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <img src="assets/images/3.webp" alt="" />
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="portfolio-item" style="text-align: justify;">
-                                <h4 id="industrial_security">INDUSTRIAL SECURITY</h4>
-                                <p id="industrial_security_description">
-                                    Industrial security is of paramount importance in today's fast-paced and
-                                    ever-evolving business landscape. The intricate nature of industrial facilities
-                                    demands a robust security framework, and this is where our dedicated team of
-                                    security guards steps in. With unwavering vigilance and a deep understanding of
-                                    industrial processes, our security guards are the first line of defense against
-                                    potential threats. They meticulously monitor access points, conduct thorough
-                                    inspections, and implement stringent security protocols to ensure the safety of
-                                    personnel, assets, and sensitive information. Our security guards are not just
-                                    watchful eyes; they are well-trained professionals who proactively identify
-                                    vulnerabilities, deter potential risks, and respond swiftly to any emerging
-                                    situations. Their presence instills confidence in the workforce and helps maintain a
-                                    secure environment that fosters productivity and peace of mind. At RRL Security Pvt.
-                                    Ltd. we take industrial security to heart, safeguarding the foundations on which
-                                    businesses thrive.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="portfolio-item" style="text-align: justify;">
-                                <h4 id="retail_security">RETAIL SECURITY</h4>
-                                <p id="retail_security_description">
-                                    In the dynamic landscape of retail, security is a paramount concern that directly
-                                    influences both customer experience and business operations. Our dedicated team of
-                                    highly trained security guards specializes in providing comprehensive retail
-                                    security solutions that encompass a range of vital aspects. From deterring theft and
-                                    preventing shoplifting to ensuring a safe shopping environment for customers and
-                                    staff, our security guards are equipped with the expertise to maintain order and
-                                    protect assets. With an acute understanding of the unique challenges faced in retail
-                                    settings, our security personnel effectively monitor entrances and exits, conduct
-                                    routine patrols, and implement access control measures. By focusing on proactive
-                                    prevention and maintaining a visible presence, our security guards play a pivotal
-                                    role in fostering a secure and enjoyable shopping atmosphere, enhancing customer
-                                    trust, and safeguarding the retail establishment's reputation. At RRL Security Pvt.
-                                    Ltd. we take pride in our commitment to upholding the security and success of your
-                                    retail venture.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <img src="assets/images/bs.webp" alt="" />
-                        </div>
-                    </div>
-                    <div class="portfolio">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <img src="assets/images/3.webp" alt="" />
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="portfolio-item" style="text-align: justify;">
-                                <h4 id="hospital_security">HOSPITAL SECURITY</h4>
-                                <p id="hospital_security_description">
-                                    Hospital security is a critical aspect of ensuring a safe and secure environment
-                                    for patients, visitors, and healthcare professionals. Security guards play a pivotal
-                                    role in upholding the well-being of everyone within the hospital premises. These
-                                    dedicated professionals are not only the first line of defense against potential
-                                    threats but also the reassuring presence that maintains order and prevents
-                                    unauthorized access. From monitoring entrances and exits to conducting regular
-                                    patrols, security guards ensure that only authorized individuals are granted
-                                    access, thereby safeguarding patient privacy and sensitive medical information.
-                                    Additionally, they are trained to handle emergency situations with swift and
-                                    efficient responses, ensuring the smooth evacuation of patients and personnel
-                                    when necessary. Hospital security guards provide the peace of mind that allows
-                                    medical staff to focus on providing quality care while creating an environment where
-                                    patients can heal and recover without worry.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="portfolio-item" style="text-align: justify;">
-                                <h4 id="property_security">PROPERTY SECURITY</h4>
-                                <p id="property_security_description">
-                                    Property security is of paramount importance, and our dedicated team of
-                                    security guards takes it upon themselves to ensure the safeguarding of your
-                                    valuable assets. With their vigilant presence and unwavering commitment, our
-                                    security guards act as the first line of defense against potential threats
-                                    to your property. From residential complexes to commercial establishments,
-                                    our guards are trained to employ a combination of proactive surveillance and
-                                    quick response to maintain a secure environment. They conduct thorough
-                                    perimeter checks, monitor access points, and are skilled in identifying and
-                                    addressing any suspicious activities promptly. Our security guards are not
-                                    only equipped with the necessary skills and training, but they also carry a
-                                    sense of responsibility to uphold the integrity of your property's security.
-                                    With their watchful eyes and dedication, you can trust that your property is
-                                    in capable hands, ensuring a sense of safety and peace for both you and your
-                                    stakeholders.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <img src="assets/images/bs.webp" alt="" />
-                        </div>
-                    </div>
-                    <div class="portfolio">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <img src="assets/images/3.webp" alt="" />
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="portfolio-item" style="text-align: justify;">
-                                <h4 id="school_security">SCHOOL SECURITY</h4>
-                                <p id="school_security_description">
-                                    The safety and security of students within a school environment are
-                                    paramount, and this responsibility is diligently undertaken by our team of
-                                    dedicated security guards. At [School Name], our security guards play a
-                                    pivotal role in creating a safe and conducive learning environment for
-                                    students, teachers, and staff members alike. Trained to be vigilant,
-                                    approachable, and responsive, our security personnel are a reassuring
-                                    presence that ensures unauthorized individuals are kept at bay and potential
-                                    threats are promptly addressed. From monitoring access points to conducting
-                                    routine patrols, our security guards employ their expertise to mitigate
-                                    risks and prevent any disruptions that may compromise the well-being of the
-                                    school community. With a strong commitment to safeguarding both the physical
-                                    and emotional security of everyone on campus, our security guards uphold a
-                                    culture of safety that fosters a sense of trust and tranquility, allowing
-                                    students to focus on their studies and personal growth without worry.
-                                </p>
-                            </div>
-                        </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="sections">
-        <div class="heading">
-            <div class="title text-center arrow-left">
-                <img class="hidden-xs" src="assets/images/left-arrow.png" alt="" />
-                <h4 id="contact_us_1">Contact US</h4>
-            </div>
-        </div>
-        </div>
-        <div class="container">
-            <div id="contact_us_form">
-                <div class="contact-frame">
-                    <div class="contact-icon">
-                        <i class="fas fa-mobile-alt"></i>
+        
+        <section id="join-us" style="padding: 5%;">
+            <div class="container">
+                <h2>Join Us</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>Apply Now</h3>
+                        <form action="mailto:info@rrlsecurity.com" method="post" enctype="text/plain">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" class="form-control" id="name" name="name"
+                                    placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    placeholder="Enter your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="mobile">Mobile</label>
+                                <input type="tel" class="form-control" id="mobile" name="mobile"
+                                    placeholder="Enter your mobile number" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </form>
                     </div>
-                    <a href="tel:" style="text-align: center;font-weight: bolder;" id="tel_1">8604911129</a>
-                    <br><br>
-                    <a href="tel:" style="text-align: center; font-weight: bolder;" id="tel_2">9936814362</a>
-                    <br><br>
-                    <a href="tel:" style="text-align: center; font-weight: bolder;" id="tel_3">9313431129</a>
-                    <div class="contact-icon">
-                        <i class="fab fa-whatsapp"></i>
-                    </div>
-                    <a href="tel:" style="text-align: center;font-weight: bolder;" id="tel_4">8604911129</a>
-                    <br><br>
-                    <a href="tel:" style="text-align: center;font-weight: bolder;" id="tel_5">9936814362</a>
-                    <div class="contact-icon">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <a href="mailto:" style="text-align: center;font-weight: bolder;">admin@rrlsecurity.com</a>
-                    <br><br>
-                    <a href="mailto:" style="text-align: center; font-weight: bolder;">hr@rrlrrlsecurity.com</a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="we-are-hiring" class="sections">
-        <div class="container">
-            <div class="heading">
-                <div class="title text-center arrow-right">
-                    <h4 id="join_us_today">JOIN US TODAY !</h4>
-                    <img class="hidden-xs" src="assets/images/right-arrow.png" alt="" />
-                </div>
-            </div>
-            <form class="well form-horizontal" action=" " method="post" id="contact_form">
-                <fieldset>
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" id="fn">First Name</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="first_name" id="first_name" placeholder="First Name" class="form-control"
-                                    type="text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" id="ln">Last Name</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="last_name" id="last_name" placeholder="Last Name" class="form-control"
-                                    type="text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" id="e_mail">E-Mail</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input name="email" id="email" placeholder="E-Mail Address" class="form-control"
-                                    type="text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-4 control-label" id="label_mobile">Mobile #</label>
-                        <div class="col-md-4 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                                <input name="mobile" id="mobile" placeholder="(123) 456-7890" class="form-control"
-                                    type="text">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label class="col-md-4 control-label"></label>
-                        <div class="col-md-4">
-                            <button type="submit" class="btn btn-warning" id="sendEmail">Submit<span
-                                    class="glyphicon glyphicon-send"></span>
-                            </button>
-                        </div>
-                    </div>
-
-                </fieldset>
-            </form>
-        </div>
-    </section>
-
-    <section id="our-team" class="sections">
-        <div class="container">
-
-            <div class="heading">
-                <div class="title text-center arrow-left">
-                    <img class="hidden-xs" src="assets/images/left-arrow.png" alt="" />
-                    <h4 id="our_team_members">Our Team Members</h4>
-                </div>
-            </div>
-        </div>
-
-        <div class="container-fluid project-bg">
-            <div class="row">
-                <div class="main-team text-center">
-                    <div class="col-md-4 col-sm-6 col-xs-12">
+        </section>
+        <section id="team-members" style="padding: 5%;">
+            <div class="container">
+                <h2>Our Team</h2>
+                <div class="row">
+                    <div class="col-md-4">
                         <div class="team-member">
-                            <img class="img-circle" src="assets/images/team/1.webp" alt="" />
-                            <h5 id="d1_name">R. K. Nigam</h5>
-                            <p id="d1_des">Director</p>
-                            <p id="d1_email">director@rrlsecurity.com</p>
+                            <img src="images/team-member1.jpg" alt="Team Member 1">
+                            <h3>John Doe</h3>
+                            <p>Position: Security Manager</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="col-md-4">
                         <div class="team-member">
-                            <img class="img-circle" src="assets/images/team/4.webp" alt="" />
-                            <h5 id="d2_name">Rohan Nigam</h5>
-                            <p id="d2_des">Director</p>
-                            <p id="d2_email">director@rrlsecurity.com</p>
+                            <img src="images/team-member2.jpg" alt="Team Member 2">
+                            <h3>Jane Smith</h3>
+                            <p>Position: Security Officer</p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-6 col-xs-12">
+                    <div class="col-md-4">
                         <div class="team-member">
-                            <img class="img-circle" src="assets/images/team/2.webp" alt="" />
-                            <h5 id="hr_name">Supriya Nigam</h5>
-                            <p id="hr_des">Director</p>
-                            <p id="hr_email">hr-head@rrlsecurity.com</p>
+                            <img src="images/team-member3.jpg" alt="Team Member 3">
+                            <h3>Mike Johnson</h3>
+                            <p>Position: Security Supervisor</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <div class="scroll-top">
-        <div class="scrollup">
-            <i class="fa fa-angle-double-up"></i>
-        </div>
-    </div>
-
-    <footer id="footer" class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="main-footer">
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="footer-item">
-                            <h2 id="f_intro">INTRODUCTION</h2>
-                            <ul>
-                                <li><a href="#" id="f_au">ABOUT US</a></li>
-                            </ul>
-                        </div>
+        </section>
+        <section id="footer" style="padding: 5%;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h3>About Us</h3>
+                        <p>RRL Security Pvt. Ltd. is a trusted partner in comprehensive security solutions. We are
+                            committed to safeguarding lives and assets, offering a wide range of security services
+                            tailored to meet the diverse needs of our clients.</p>
                     </div>
-
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="footer-item">
-                            <h2 id="f_services">SERVICES</h2>
-                            <ul>
-                                <li id="male_security"><a href="#services" class="scrollLink" id="f_ms">MALE SECURITY
-                                        GUARD</a></li>
-                                <li><a href="#female_security" class="scrollLink" id="f_fs">FEMALE SECURITY GUARD</a>
-                                </li>
-                                <li><a href="#cash_management" class="scrollLink" id="f_cm">CASH MANAGEMENT</a></li>
-                                <li><a href="#event_security" class="scrollLink" id="f_es">EVENT SECURITY</a></li>
-                                <li><a href="#office_security" class="scrollLink" id="f_os">OFFICE SECURITY</a></li>
-                                <li><a href="#building_security" class="scrollLink" id="f_bs">BUILDING SECURITY
-                                        GUARD</a></li>
-                                <li><a href="#industrial_security" class="scrollLink" id="f_is">INDUSTRIAL SECURITY</a>
-                                </li>
-                                <li><a href="#retail_security" class="scrollLink" id="f_rs">RETAIL SECURITY</a></li>
-                                <li><a href="#hospital_security" class="scrollLink" id="f_hs">HOSPITAL SECURITY</a></li>
-                                <li><a href="#property_security" class="scrollLink" id="f_ps">PROPERTY SECURITY</a></li>
-                                <li><a href="#school_security" class="scrollLink" id="f_ss">SCHOOL SECURITY</a></li>
-                            </ul>
-                        </div>
+                    <div class="col-md-6">
+                        <h3>Contact Information</h3>
+                        <ul>
+                            <li><strong>Phone:</strong> +1 123-456-7890</li>
+                            <li><strong>Email:</strong> info@example.com</li>
+                            <li><strong>Address:</strong> 123 Main Street, City, Country</li>
+                        </ul>
                     </div>
-
-                    <div class="col-md-3 col-sm-6 col-xs-12">
-                        <div class="footer-item">
-                            <h2 id="f_contact">CONTACT</h2>
-                            <ul>
-                                <li><a href="#contact-us" class="scrollLink" id="f_cu">CONTACT US</a></li>
-                                <li><a href="#our-team" class="scrollLink" id="f_ot">OUR TEAM</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="socio-copyright">
-                    <div class="social">
-                        <a target="_blank" href="#"><i class="fab fa-facebook"></i></a>
-                        <a target="_blank" href="#"><i class="fab fa-twitter"></i></a>
-                        <a target="_blank" href="#"><i class="fab fa-instagram"></i></a>
-                        <a target="_blank" href="https://www.linkedin.com/in/rohan-nigam-b2780055/"><i
-                                class="fab fa-linkedin"></i></a>
-                    </div>
-                    <!-- <p>Made with <i class="fa fa-heart"></i> by <a target="_blank" href="http://rrlsecurity.com">
-                            RRL Security Pvt. Ltd. </a>2023. All rights reserved.</p> -->
                 </div>
             </div>
-        </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>&copy; 2022 RRL Security Pvt. Ltd. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="social-media">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    </main>
+    </main>
 
+    <footer>
+        <!-- Add your footer content here -->
     </footer>
-    <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
-    <script src="assets/js/vendor/bootstrap.min.js"></script>
-    <script src="assets/js/plugins.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/carrer.js"></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
-    <script
-        src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
-    <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
-    <script src="assets/js/custom.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+    </script>
 </body>
 
 </html>
