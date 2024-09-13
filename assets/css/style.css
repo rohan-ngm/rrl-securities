@@ -622,7 +622,7 @@ h1 span {
 }
 
 .navbar-default {
-    background-color: #212936;
+    /* background-color: #212936; */
     border: transparent;
     padding-top: 10px;
 }
@@ -660,7 +660,7 @@ h1 span {
 }
 
 .menu-bg {
-    background: #212936;
+    /* background: #212936; */
     padding: 10px 0;
 }
 
