@@ -630,6 +630,7 @@ h1 span {
 .navbar {
     margin-bottom: 20px;
     border: 1px solid transparent;
+    background-color: #5b92eb;
 }
 
 .navbar-default .navbar-nav>.active a {
@@ -674,7 +675,7 @@ h1 span {
 
 .homepage-style {
     padding-top: 100px;
-} 
+}
 
 .homepage-style .top-arrow img {
     margin-top: 20px;
@@ -1232,4 +1233,10 @@ h1 span {
     height: 100%;
     display: none;
     position: fixed;
+}
+
+.border-with-shadow {
+    padding: 10%;
+    border-radius: 15px;
+    box-shadow: 10px 10px rgb(171, 168, 168);
 }
