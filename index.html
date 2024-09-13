@@ -17,15 +17,17 @@
     <link rel="stylesheet" href="assets/css/responsive.css" />
     <link rel="shortcut icon" href="images/fav_new.ico" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</body>
 </head>
 
 <body data-spy="scroll" data-target="#main-navbar">
     <div class='preloader'>
         <div class='loaded'>&nbsp;</div>
     </div>
-    <div id="menubar" class="main-menu">
+    <div id="menubar" class="main-menu"></div>
         <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                         data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -34,11 +36,10 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                </div>
-                <div style="margin-top: -41px;">
-                    <a class="navbar-brand" href="index.html" style="position: fixed;"><img src="images/logo.png"
+                    <a class="navbar-brand" href="index.html"><img src="images/logo.png"
                         alt="" style="height: 41px;"/></a>
                 </div>
+
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="active"><a href="#home" class="scrollLink" id="intro">Introduction<span
@@ -47,16 +48,13 @@
                         <li><a href="#contact_us_form" class="scrollLink" id="contact_us_1">Contact Us</a></li>
                         <li><a href="#we-are-hiring" class="scrollLink" id="we_are_hiring">We are hiring</a></li>
                         <li><a href="#our-team" class="scrollLink" id="our_team">Our Team</a></li>
-                        <li><a href="#english" class="scrollLink" onclick="updateLanguageContent('en')"
-                                id="english">ENGLISH</a></li>
-                        <li><a href="#hindi" class="scrollLink" onclick="updateLanguageContent('hi')"
-                                id="hindi">हिन्दी</a></li>
+                        <li><a href="#english" class="scrollLink" onclick="updateLanguageContent('en')" id="english">ENGLISH</a></li>
+                        <li><a href="#hindi" class="scrollLink" onclick="updateLanguageContent('hi')" id="hindi">हिन्दी</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
-
     <header id="home" name="home" class="sections">
         <div class="container">
             <div class="row homepage-style">
@@ -121,7 +119,7 @@
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <div class="slider-area">
                         <div id="carousel-example-generic" class="carousel slide" data-ride="carousel"
-                            data-interval="3000">
+                            data-interval="3000" style="border-radius: 10px;">
                             <ol class="carousel-indicators">
                                 <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
                                 <li data-target="#carousel-example-generic" data-slide-to="1"></li>
@@ -170,278 +168,300 @@
                     </select>
                 </div> -->
                 <div class="portfolio-wrap">
-                    <div class="portfolio">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <img src="images/5.jpeg" alt="" />
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="portfolio-item" style="text-align: justify;">
-                                <h4 id="male_security">MALE SECURITY GUARD</h4>
-                                <p id="male_security_description">
-                                    Our security guards are the embodiment of vigilance and reliability, standing as
-                                    unwavering sentinels of safety. Trained to perfection, they bring a sense of
-                                    assurance to any environment they secure. Equipped with comprehensive expertise and
-                                    a commitment to safeguarding lives and property, our security guards are not just
-                                    protectors, but also ambassadors of peace. With a keen eye for detail and a
-                                    proactive approach, they ensure that every corner is shielded from potential
-                                    threats. Our security guards are not just professionals; they are the guardians of
-                                    tranquility, ensuring that you can carry on with confidence in a secure environment.
-                                    Trust in their dedication and experience as they stand as the first line of defense
-                                    against any challenge, demonstrating our unwavering commitment to your safety.
-                                </p>
+                    <section class="w3-panel w3-border" style="padding: 10%; border-radius: 15px; box-shadow: 10px 10px rgb(171, 168, 168);">
+                        <div class="portfolio">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <img src="images/5.jpeg" alt="" style="border-radius: 20px;"/>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="portfolio-item" style="text-align: justify;">
+                                    <h4 id="male_security">MALE SECURITY GUARD</h4>
+                                    <p id="male_security_description">
+                                        Our security guards are the embodiment of vigilance and reliability, standing as
+                                        unwavering sentinels of safety. Trained to perfection, they bring a sense of
+                                        assurance to any environment they secure. Equipped with comprehensive expertise and
+                                        a commitment to safeguarding lives and property, our security guards are not just
+                                        protectors, but also ambassadors of peace. With a keen eye for detail and a
+                                        proactive approach, they ensure that every corner is shielded from potential
+                                        threats. Our security guards are not just professionals; they are the guardians of
+                                        tranquility, ensuring that you can carry on with confidence in a secure environment.
+                                        Trust in their dedication and experience as they stand as the first line of defense
+                                        against any challenge, demonstrating our unwavering commitment to your safety.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="portfolio">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="portfolio-item" style="text-align: justify;">
-                                <h4 id="female_security">FEMALE SECURITY GUARD</h4>
-                                <p id="female_security_description">
-                                    Introducing our exceptional team of female security guards – a testament to
-                                    empowerment, strength, and professionalism. At RRL Security Pvt. Ltd. we
-                                    recognize the
-                                    importance of diversity and inclusivity in the security industry. Our female
-                                    security guards are highly trained, skilled, and committed to providing top-tier
-                                    security services to our clients. With an acute sense of situational awareness and a
-                                    unique ability to foster a secure environment, they bring a distinctive touch to
-                                    every assignment. Their presence signifies not only a commitment to safety but also
-                                    a representation of equality in the field. Trust in our female security guards to
-                                    bring a balance of empathy and authority, ensuring your peace of mind while
-                                    upholding our unwavering standards of security excellence.
-                                </p>
+                    </section>
+                    <section class="w3-panel w3-border" style="padding: 10%; border-radius: 15px; box-shadow: 10px 10px rgb(171, 168, 168);">
+                        <div class="portfolio">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="portfolio-item" style="text-align: justify;">
+                                    <h4 id="female_security">FEMALE SECURITY GUARD</h4>
+                                    <p id="female_security_description">
+                                        Introducing our exceptional team of female security guards – a testament to
+                                        empowerment, strength, and professionalism. At RRL Security Pvt. Ltd. we
+                                        recognize the
+                                        importance of diversity and inclusivity in the security industry. Our female
+                                        security guards are highly trained, skilled, and committed to providing top-tier
+                                        security services to our clients. With an acute sense of situational awareness and a
+                                        unique ability to foster a secure environment, they bring a distinctive touch to
+                                        every assignment. Their presence signifies not only a commitment to safety but also
+                                        a representation of equality in the field. Trust in our female security guards to
+                                        bring a balance of empathy and authority, ensuring your peace of mind while
+                                        upholding our unwavering standards of security excellence.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <img src="images/female.png" alt="" style="border-radius: 20px;" />
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <img src="images/female.png" alt="" />
-                        </div>
-                    </div>
-                    <div class="portfolio">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <img src="images/cash.jpg" alt="" />
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="portfolio-item" style="text-align: justify;">
-                                <h4 id="cash_management">CASH MANAGEMENT</h4>
-                                <p id="cash_management_description">
-                                    In the realm of modern business, effective cash management is paramount to ensuring
-                                    financial stability and smooth operations. At RRL Security Pvt. Ltd. our
-                                    dedicated
-                                    team of security guards goes beyond traditional security roles to provide
-                                    comprehensive cash management solutions that safeguard your financial assets. Our
-                                    highly trained professionals are not only vigilant guardians but also adept cash
-                                    handlers who are well-versed in the intricacies of secure cash handling procedures.
-                                    From monitoring cash movements and maintaining accurate records to facilitating
-                                    secure cash transfers, our security guards bring a heightened level of expertise to
-                                    cash management. With an unwavering commitment to integrity and accountability, we
-                                    ensure that your valuable assets remain safeguarded at every step. Trust RRL
-                                    Security Pvt. Ltd. for seamless cash management that not only ensures security but
-                                    also
-                                    bolsters your financial confidence.
-                                </p>
+                    </section>
+                    <section class="w3-panel w3-border" style="padding: 10%; border-radius: 15px; box-shadow: 10px 10px rgb(171, 168, 168);">
+                        <div class="portfolio">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <img src="images/cash.jpg" alt="" style="border-radius: 20px;" />
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="portfolio-item" style="text-align: justify;">
+                                    <h4 id="cash_management">CASH MANAGEMENT</h4>
+                                    <p id="cash_management_description">
+                                        In the realm of modern business, effective cash management is paramount to ensuring
+                                        financial stability and smooth operations. At RRL Security Pvt. Ltd. our
+                                        dedicated
+                                        team of security guards goes beyond traditional security roles to provide
+                                        comprehensive cash management solutions that safeguard your financial assets. Our
+                                        highly trained professionals are not only vigilant guardians but also adept cash
+                                        handlers who are well-versed in the intricacies of secure cash handling procedures.
+                                        From monitoring cash movements and maintaining accurate records to facilitating
+                                        secure cash transfers, our security guards bring a heightened level of expertise to
+                                        cash management. With an unwavering commitment to integrity and accountability, we
+                                        ensure that your valuable assets remain safeguarded at every step. Trust RRL
+                                        Security Pvt. Ltd. for seamless cash management that not only ensures security but
+                                        also
+                                        bolsters your financial confidence.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="portfolio">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="portfolio-item" style="text-align: justify;">
-                                <h4 id="event_security">EVENT SECURITY</h4>
-                                <p id="event_security_description">
-                                    Event security is a critical aspect that demands meticulous attention and effective
-                                    management to ensure the safety and smooth execution of any gathering. Our dedicated
-                                    team of highly trained security guards takes on the responsibility of event security
-                                    with utmost professionalism and precision. From grand celebrations to corporate
-                                    conferences, our security guards are adept at creating a secure environment that
-                                    allows attendees to focus on enjoying the event without worries. With a keen eye for
-                                    detail and a proactive approach, our security personnel manage crowd control, access
-                                    points, and emergency response, ensuring that every aspect of the event remains
-                                    under vigilant watch. Whether it's a small-scale affair or a large-scale festival,
-                                    our security guards are well-equipped to handle any situation, ensuring that the
-                                    event unfolds seamlessly and everyone present feels secure and protected.
-                                </p>
+                    </section>
+                    <section class="w3-panel w3-border" style="padding: 10%; border-radius: 15px; box-shadow: 10px 10px rgb(171, 168, 168);">
+                        <div class="portfolio">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="portfolio-item" style="text-align: justify;">
+                                    <h4 id="event_security">EVENT SECURITY</h4>
+                                    <p id="event_security_description">
+                                        Event security is a critical aspect that demands meticulous attention and effective
+                                        management to ensure the safety and smooth execution of any gathering. Our dedicated
+                                        team of highly trained security guards takes on the responsibility of event security
+                                        with utmost professionalism and precision. From grand celebrations to corporate
+                                        conferences, our security guards are adept at creating a secure environment that
+                                        allows attendees to focus on enjoying the event without worries. With a keen eye for
+                                        detail and a proactive approach, our security personnel manage crowd control, access
+                                        points, and emergency response, ensuring that every aspect of the event remains
+                                        under vigilant watch. Whether it's a small-scale affair or a large-scale festival,
+                                        our security guards are well-equipped to handle any situation, ensuring that the
+                                        event unfolds seamlessly and everyone present feels secure and protected.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <img src="images/event.jpg" alt="" style="border-radius: 20px;" />
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <img src="images/event.jpg" alt="" />
-                        </div>
-                    </div>
-                    <div class="portfolio">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <img src="images/officeSecurity.png" alt="" />
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="portfolio-item" style="text-align: justify;">
-                                <h4 id="office_security">OFFICE SECURITY</h4>
-                                <p id="office_security_description">
-                                    Office security is of paramount importance, and our dedicated team of security
-                                    guards is here to ensure a safe and secure environment for your workplace. With a
-                                    vigilant presence and a deep commitment to safeguarding your office premises, our
-                                    security guards play a pivotal role in maintaining order and deterring potential
-                                    security threats. They are meticulously trained to monitor access points, verify
-                                    identities, and enforce security protocols, creating a strong deterrent against
-                                    unauthorized entry. Beyond their physical presence, our security guards are skilled
-                                    in crisis management, responding swiftly and effectively to emergencies while
-                                    ensuring minimal disruption to daily operations. By collaborating seamlessly with
-                                    your team, they contribute to a cohesive security strategy that fosters a sense of
-                                    safety among employees and visitors alike. At RRL Security Pvt. Ltd., we understand
-                                    that a secure office environment is not just a necessity; it's the foundation upon
-                                    which productivity and peace of mind thrive.
-                                </p>
+                    </section>
+                    <section class="w3-panel w3-border" style="padding: 10%; border-radius: 15px; box-shadow: 10px 10px rgb(171, 168, 168);">
+                        <div class="portfolio">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <img src="images/officeSecurity.png" alt="" style="border-radius: 20px;" />
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="portfolio-item" style="text-align: justify;">
+                                    <h4 id="office_security">OFFICE SECURITY</h4>
+                                    <p id="office_security_description">
+                                        Office security is of paramount importance, and our dedicated team of security
+                                        guards is here to ensure a safe and secure environment for your workplace. With a
+                                        vigilant presence and a deep commitment to safeguarding your office premises, our
+                                        security guards play a pivotal role in maintaining order and deterring potential
+                                        security threats. They are meticulously trained to monitor access points, verify
+                                        identities, and enforce security protocols, creating a strong deterrent against
+                                        unauthorized entry. Beyond their physical presence, our security guards are skilled
+                                        in crisis management, responding swiftly and effectively to emergencies while
+                                        ensuring minimal disruption to daily operations. By collaborating seamlessly with
+                                        your team, they contribute to a cohesive security strategy that fosters a sense of
+                                        safety among employees and visitors alike. At RRL Security Pvt. Ltd., we understand
+                                        that a secure office environment is not just a necessity; it's the foundation upon
+                                        which productivity and peace of mind thrive.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="portfolio">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="portfolio-item" style="text-align: justify;">
-                                <h4 id="building_security">BUILDING SECURITY GUARD</h4>
-                                <p id="building_security_description">
-                                    Security guards play a vital role in ensuring the safety and protection of
-                                    buildings. With a watchful presence and a keen eye for detail, security guards
-                                    effectively safeguard entrances, monitor surveillance systems, and control access
-                                    points, creating a secure environment for both occupants and assets. Their
-                                    continuous patrolling and diligent monitoring deter unauthorized access, preventing
-                                    potential threats from gaining foothold. Whether it's a residential complex,
-                                    commercial establishment, or industrial facility, security guards provide a sense of
-                                    assurance and deterrence, working tirelessly to maintain order and respond promptly
-                                    to any security breaches. Their role goes beyond physical presence; they act as the
-                                    first line of defense, upholding the integrity of the building's security
-                                    infrastructure and fostering a secure atmosphere that promotes peace of mind for all
-                                    those within.
-                                </p>
+                    </section>
+                    <section class="w3-panel w3-border" style="padding: 10%; border-radius: 15px; box-shadow: 10px 10px rgb(171, 168, 168);">
+                        <div class="portfolio">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="portfolio-item" style="text-align: justify;">
+                                    <h4 id="building_security">BUILDING SECURITY GUARD</h4>
+                                    <p id="building_security_description">
+                                        Security guards play a vital role in ensuring the safety and protection of
+                                        buildings. With a watchful presence and a keen eye for detail, security guards
+                                        effectively safeguard entrances, monitor surveillance systems, and control access
+                                        points, creating a secure environment for both occupants and assets. Their
+                                        continuous patrolling and diligent monitoring deter unauthorized access, preventing
+                                        potential threats from gaining foothold. Whether it's a residential complex,
+                                        commercial establishment, or industrial facility, security guards provide a sense of
+                                        assurance and deterrence, working tirelessly to maintain order and respond promptly
+                                        to any security breaches. Their role goes beyond physical presence; they act as the
+                                        first line of defense, upholding the integrity of the building's security
+                                        infrastructure and fostering a secure atmosphere that promotes peace of mind for all
+                                        those within.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <img src="images/1.jpeg" alt="" style="border-radius: 20px;" />
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <img src="images/1.jpeg" alt="" />
-                        </div>
-                    </div>
-                    <div class="portfolio">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <img src="images/2.jpeg" alt="" />
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="portfolio-item" style="text-align: justify;">
-                                <h4 id="industrial_security">INDUSTRIAL SECURITY</h4>
-                                <p id="industrial_security_description">
-                                    Industrial security is of paramount importance in today's fast-paced and
-                                    ever-evolving business landscape. The intricate nature of industrial facilities
-                                    demands a robust security framework, and this is where our dedicated team of
-                                    security guards steps in. With unwavering vigilance and a deep understanding of
-                                    industrial processes, our security guards are the first line of defense against
-                                    potential threats. They meticulously monitor access points, conduct thorough
-                                    inspections, and implement stringent security protocols to ensure the safety of
-                                    personnel, assets, and sensitive information. Our security guards are not just
-                                    watchful eyes; they are well-trained professionals who proactively identify
-                                    vulnerabilities, deter potential risks, and respond swiftly to any emerging
-                                    situations. Their presence instills confidence in the workforce and helps maintain a
-                                    secure environment that fosters productivity and peace of mind. At RRL Security Pvt.
-                                    Ltd. we take industrial security to heart, safeguarding the foundations on which
-                                    businesses thrive.
-                                </p>
+                    </section>
+                    <section class="w3-panel w3-border" style="padding: 10%; border-radius: 15px; box-shadow: 10px 10px rgb(171, 168, 168);">
+                        <div class="portfolio">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <img src="images/2.jpeg" alt="" style="border-radius: 20px;" />
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="portfolio-item" style="text-align: justify;">
+                                    <h4 id="industrial_security">INDUSTRIAL SECURITY</h4>
+                                    <p id="industrial_security_description">
+                                        Industrial security is of paramount importance in today's fast-paced and
+                                        ever-evolving business landscape. The intricate nature of industrial facilities
+                                        demands a robust security framework, and this is where our dedicated team of
+                                        security guards steps in. With unwavering vigilance and a deep understanding of
+                                        industrial processes, our security guards are the first line of defense against
+                                        potential threats. They meticulously monitor access points, conduct thorough
+                                        inspections, and implement stringent security protocols to ensure the safety of
+                                        personnel, assets, and sensitive information. Our security guards are not just
+                                        watchful eyes; they are well-trained professionals who proactively identify
+                                        vulnerabilities, deter potential risks, and respond swiftly to any emerging
+                                        situations. Their presence instills confidence in the workforce and helps maintain a
+                                        secure environment that fosters productivity and peace of mind. At RRL Security Pvt.
+                                        Ltd. we take industrial security to heart, safeguarding the foundations on which
+                                        businesses thrive.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="portfolio">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="portfolio-item" style="text-align: justify;">
-                                <h4 id="retail_security">RETAIL SECURITY</h4>
-                                <p id="retail_security_description">
-                                    In the dynamic landscape of retail, security is a paramount concern that directly
-                                    influences both customer experience and business operations. Our dedicated team of
-                                    highly trained security guards specializes in providing comprehensive retail
-                                    security solutions that encompass a range of vital aspects. From deterring theft and
-                                    preventing shoplifting to ensuring a safe shopping environment for customers and
-                                    staff, our security guards are equipped with the expertise to maintain order and
-                                    protect assets. With an acute understanding of the unique challenges faced in retail
-                                    settings, our security personnel effectively monitor entrances and exits, conduct
-                                    routine patrols, and implement access control measures. By focusing on proactive
-                                    prevention and maintaining a visible presence, our security guards play a pivotal
-                                    role in fostering a secure and enjoyable shopping atmosphere, enhancing customer
-                                    trust, and safeguarding the retail establishment's reputation. At RRL Security Pvt.
-                                    Ltd. we take pride in our commitment to upholding the security and success of your
-                                    retail venture.
-                                </p>
+                    </section>
+                    <section class="w3-panel w3-border" style="padding: 10%; border-radius: 15px; box-shadow: 10px 10px rgb(171, 168, 168);">
+                        <div class="portfolio">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="portfolio-item" style="text-align: justify;">
+                                    <h4 id="retail_security">RETAIL SECURITY</h4>
+                                    <p id="retail_security_description">
+                                        In the dynamic landscape of retail, security is a paramount concern that directly
+                                        influences both customer experience and business operations. Our dedicated team of
+                                        highly trained security guards specializes in providing comprehensive retail
+                                        security solutions that encompass a range of vital aspects. From deterring theft and
+                                        preventing shoplifting to ensuring a safe shopping environment for customers and
+                                        staff, our security guards are equipped with the expertise to maintain order and
+                                        protect assets. With an acute understanding of the unique challenges faced in retail
+                                        settings, our security personnel effectively monitor entrances and exits, conduct
+                                        routine patrols, and implement access control measures. By focusing on proactive
+                                        prevention and maintaining a visible presence, our security guards play a pivotal
+                                        role in fostering a secure and enjoyable shopping atmosphere, enhancing customer
+                                        trust, and safeguarding the retail establishment's reputation. At RRL Security Pvt.
+                                        Ltd. we take pride in our commitment to upholding the security and success of your
+                                        retail venture.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <img src="images/retail.jpg" alt="" style="border-radius: 20px;" />
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <img src="images/retail.jpg" alt="" />
-                        </div>
-                    </div>
-                    <div class="portfolio">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <img src="images/4.jpeg" alt="" />
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="portfolio-item" style="text-align: justify;">
-                                <h4 id="hospital_security">HOSPITAL SECURITY</h4>
-                                <p id="hospital_security_description">
-                                    Hospital security is a critical aspect of ensuring a safe and secure environment
-                                    for patients, visitors, and healthcare professionals. Security guards play a pivotal
-                                    role in upholding the well-being of everyone within the hospital premises. These
-                                    dedicated professionals are not only the first line of defense against potential
-                                    threats but also the reassuring presence that maintains order and prevents
-                                    unauthorized access. From monitoring entrances and exits to conducting regular
-                                    patrols, security guards ensure that only authorized individuals are granted
-                                    access, thereby safeguarding patient privacy and sensitive medical information.
-                                    Additionally, they are trained to handle emergency situations with swift and
-                                    efficient responses, ensuring the smooth evacuation of patients and personnel
-                                    when necessary. Hospital security guards provide the peace of mind that allows
-                                    medical staff to focus on providing quality care while creating an environment where
-                                    patients can heal and recover without worry.
-                                </p>
+                    </section>
+                    <section class="w3-panel w3-border" style="padding: 10%; border-radius: 15px; box-shadow: 10px 10px rgb(171, 168, 168);">
+                        <div class="portfolio">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <img src="images/4.jpeg" alt="" style="border-radius: 20px;" />
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="portfolio-item" style="text-align: justify;">
+                                    <h4 id="hospital_security">HOSPITAL SECURITY</h4>
+                                    <p id="hospital_security_description">
+                                        Hospital security is a critical aspect of ensuring a safe and secure environment
+                                        for patients, visitors, and healthcare professionals. Security guards play a pivotal
+                                        role in upholding the well-being of everyone within the hospital premises. These
+                                        dedicated professionals are not only the first line of defense against potential
+                                        threats but also the reassuring presence that maintains order and prevents
+                                        unauthorized access. From monitoring entrances and exits to conducting regular
+                                        patrols, security guards ensure that only authorized individuals are granted
+                                        access, thereby safeguarding patient privacy and sensitive medical information.
+                                        Additionally, they are trained to handle emergency situations with swift and
+                                        efficient responses, ensuring the smooth evacuation of patients and personnel
+                                        when necessary. Hospital security guards provide the peace of mind that allows
+                                        medical staff to focus on providing quality care while creating an environment where
+                                        patients can heal and recover without worry.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="portfolio">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="portfolio-item" style="text-align: justify;">
-                                <h4 id="property_security">PROPERTY SECURITY</h4>
-                                <p id="property_security_description">
-                                    Property security is of paramount importance, and our dedicated team of
-                                    security guards takes it upon themselves to ensure the safeguarding of your
-                                    valuable assets. With their vigilant presence and unwavering commitment, our
-                                    security guards act as the first line of defense against potential threats
-                                    to your property. From residential complexes to commercial establishments,
-                                    our guards are trained to employ a combination of proactive surveillance and
-                                    quick response to maintain a secure environment. They conduct thorough
-                                    perimeter checks, monitor access points, and are skilled in identifying and
-                                    addressing any suspicious activities promptly. Our security guards are not
-                                    only equipped with the necessary skills and training, but they also carry a
-                                    sense of responsibility to uphold the integrity of your property's security.
-                                    With their watchful eyes and dedication, you can trust that your property is
-                                    in capable hands, ensuring a sense of safety and peace for both you and your
-                                    stakeholders.
-                                </p>
+                    </section>
+                    <section class="w3-panel w3-border" style="padding: 10%; border-radius: 15px; box-shadow: 10px 10px rgb(171, 168, 168);">
+                        <div class="portfolio">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="portfolio-item" style="text-align: justify;">
+                                    <h4 id="property_security">PROPERTY SECURITY</h4>
+                                    <p id="property_security_description">
+                                        Property security is of paramount importance, and our dedicated team of
+                                        security guards takes it upon themselves to ensure the safeguarding of your
+                                        valuable assets. With their vigilant presence and unwavering commitment, our
+                                        security guards act as the first line of defense against potential threats
+                                        to your property. From residential complexes to commercial establishments,
+                                        our guards are trained to employ a combination of proactive surveillance and
+                                        quick response to maintain a secure environment. They conduct thorough
+                                        perimeter checks, monitor access points, and are skilled in identifying and
+                                        addressing any suspicious activities promptly. Our security guards are not
+                                        only equipped with the necessary skills and training, but they also carry a
+                                        sense of responsibility to uphold the integrity of your property's security.
+                                        With their watchful eyes and dedication, you can trust that your property is
+                                        in capable hands, ensuring a sense of safety and peace for both you and your
+                                        stakeholders.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <img src="images/3.jpeg" alt="" style="border-radius: 20px;" />
                             </div>
                         </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <img src="images/3.jpeg" alt="" />
-                        </div>
-                    </div>
-                    <div class="portfolio">
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <img src="images/school.jpeg" alt="" />
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                            <div class="portfolio-item" style="text-align: justify;">
-                                <h4 id="school_security">SCHOOL SECURITY</h4>
-                                <p id="school_security_description">
-                                    The safety and security of students within a school environment are
-                                    paramount, and this responsibility is diligently undertaken by our team of
-                                    dedicated security guards. At [School Name], our security guards play a
-                                    pivotal role in creating a safe and conducive learning environment for
-                                    students, teachers, and staff members alike. Trained to be vigilant,
-                                    approachable, and responsive, our security personnel are a reassuring
-                                    presence that ensures unauthorized individuals are kept at bay and potential
-                                    threats are promptly addressed. From monitoring access points to conducting
-                                    routine patrols, our security guards employ their expertise to mitigate
-                                    risks and prevent any disruptions that may compromise the well-being of the
-                                    school community. With a strong commitment to safeguarding both the physical
-                                    and emotional security of everyone on campus, our security guards uphold a
-                                    culture of safety that fosters a sense of trust and tranquility, allowing
-                                    students to focus on their studies and personal growth without worry.
-                                </p>
+                    </section>
+                    <section class="w3-panel w3-border" style="padding: 10%; border-radius: 15px; box-shadow: 10px 10px rgb(171, 168, 168);">
+                        <div class="portfolio">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <img src="images/school.jpeg" alt="" style="border-radius: 20px;" />
+                            </div>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="portfolio-item" style="text-align: justify;">
+                                    <h4 id="school_security">SCHOOL SECURITY</h4>
+                                    <p id="school_security_description">
+                                        The safety and security of students within a school environment are
+                                        paramount, and this responsibility is diligently undertaken by our team of
+                                        dedicated security guards. At [School Name], our security guards play a
+                                        pivotal role in creating a safe and conducive learning environment for
+                                        students, teachers, and staff members alike. Trained to be vigilant,
+                                        approachable, and responsive, our security personnel are a reassuring
+                                        presence that ensures unauthorized individuals are kept at bay and potential
+                                        threats are promptly addressed. From monitoring access points to conducting
+                                        routine patrols, our security guards employ their expertise to mitigate
+                                        risks and prevent any disruptions that may compromise the well-being of the
+                                        school community. With a strong commitment to safeguarding both the physical
+                                        and emotional security of everyone on campus, our security guards uphold a
+                                        culture of safety that fosters a sense of trust and tranquility, allowing
+                                        students to focus on their studies and personal growth without worry.
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
             </div>
         </div>
@@ -538,7 +558,7 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label"></label>
                         <div class="col-md-4">
-                            <button type="submit" class="btn btn-warning" id="sendEmail" style="background-color: brown;">Submit<span
+                            <button type="submit" class="btn btn-warning" id="sendEmail" style="background-color: #464646; border-color: #464646;">Submit<span
                                     class="glyphicon glyphicon-send"></span>
                             </button>
                         </div>
@@ -582,7 +602,7 @@
                     <div class="col-md-4 col-sm-6 col-xs-12">
                         <div class="team-member">
                             <img class="img-circle" src="assets/images/team/2.webp" alt="" />
-                            <h5 id="hr_name">Supriya Nigam</h5>
+                            <h5 id="hr_name">Supriya Saxena</h5>
                             <p id="hr_des">Director</p>
                             <p id="hr_email">hr-head@rrlsecurity.com</p>
                         </div>
@@ -666,11 +686,12 @@
     <script src="assets/js/main.js"></script>
     <script src="assets/js/carrer.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
     <script
         src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
     <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 
 </html>

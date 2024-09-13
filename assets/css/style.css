@@ -1183,7 +1183,7 @@ h1 span {
 }
 
 .scrollup:hover {
-    background: #de9800;
+    /* background: #de9800; */
     color: #fff;
     transform: scale(1.1);
 }
