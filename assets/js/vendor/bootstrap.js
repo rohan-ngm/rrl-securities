@@ -667,8 +667,12 @@ if (typeof jQuery === 'undefined') {
   }
 
   Collapse.prototype.getParent = function () {
-    return $(this.options.parent)
-      .find('[data-toggle="collapse"][data-parent="' + this.options.parent + '"]')
+    var parent = this.options.parent;
+    if (typeof parent !== 'string' || !parent.trim().length) {
+      throw new Error('Invalid parent selector');
+    }
+    return $.find(parent)
+      .find('[data-toggle="collapse"][data-parent="' + parent + '"]')
       .each($.proxy(function (i, element) {
         var $element = $(element)
         this.addAriaAndCollapsedClass(getTargetFromTrigger($element), $element)
